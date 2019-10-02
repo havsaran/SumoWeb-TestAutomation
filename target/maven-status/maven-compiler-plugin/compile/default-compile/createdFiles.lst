@@ -1,6 +1,8 @@
 sumo\qa\util\Xls_Reader.class
 sumo\qa\pages\Nybruker.class
+sumo\qa\pages\Pakker.class
 sumo\qa\base\TestBase.class
 sumo\qa\pages\Frontpage.class
 sumo\qa\util\TestUtil.class
 sumo\qa\ExtentReportListener\ExtentReporterNG.class
+sumo\qa\pages\HomePage.class

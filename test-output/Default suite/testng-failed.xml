@@ -3,16 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="sumo.qa.testcases.FrontpageTest">
+      <class name="sumo.qa.testcases.NybrukerTest">
         <methods>
           <include name="setExtent"/>
           <include name="setUp"/>
           <include name="endReport"/>
           <include name="tearDown"/>
-          <include name="LogginnFunction_Test"/>
-          <include name="NyBruker_FaatilgangNaaLink_Test"/>
+          <include name="goToPakkerTest"/>
         </methods>
-      </class> <!-- sumo.qa.testcases.FrontpageTest -->
+      </class> <!-- sumo.qa.testcases.NybrukerTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

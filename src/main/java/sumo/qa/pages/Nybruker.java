@@ -21,12 +21,17 @@ public class Nybruker extends TestBase {
 
 	@FindBy(xpath = "//a[contains(text(),'her')]")
 	private WebElement pakkerLink;
+	
+	@FindBy (xpath= "//span[contains(text(),'Se hva du kan få')]//parent::a")
+	private WebElement NybrukerPage_link;
+	
 
 	// Click methods
 
-	public void goToPakker() {
-
+	public Pakker goToPakker() throws InterruptedException {
+		NybrukerPage_link.click();
 		pakkerLink.click();
+		return new Pakker ();
 
 	}
 

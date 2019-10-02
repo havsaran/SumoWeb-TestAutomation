@@ -2,6 +2,7 @@ package sumo.qa.testcases;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -16,75 +17,62 @@ import com.relevantcodes.extentreports.LogStatus;
 import sumo.qa.base.TestBase;
 import sumo.qa.pages.Frontpage;
 import sumo.qa.pages.Nybruker;
+import sumo.qa.pages.Pakker;
 
-public class NybrukerTest extends TestBase{
+public class NybrukerTest extends TestBase {
 	Nybruker nybruker;
-
+	Pakker pakker;
+	
 	public ExtentReports extent;
 	public ExtentTest extentTest;
-    	
+
 	@BeforeTest
-	public void setExtent () {
-		extent = new ExtentReports(System.getProperty("user.dir")+"/test-output/ExtentReport.html",true);
-					
+	public void setExtent() {
+		extent = new ExtentReports(System.getProperty("user.dir") + "/test-output/ExtentReport.html", true);
+		
 	}
-	
-			
+
 	@BeforeMethod
-	public void setUp() throws InterruptedException{
+	public void setUp() throws InterruptedException {
 		initialization();
-				nybruker= new Nybruker ();
-	
-	}	
-	
+		
+		nybruker = new Nybruker();
+		}
+
 	@Test
 
-	String NybrukerTest () {
-		String howmanyapple = "10";
-		System.out.println(this);
-		return howmanyapple;
-		
+	void goToPakkerTest() throws InterruptedException {
+		extentTest = extent.startTest("goToPakkerTest_Testcase");
+		pakker = nybruker.goToPakker();
+	
+	Assert.assertEquals(pakker.VelgPakke.isDisplayed(), true, "Assert is not matcehddddddd");
+
 	}
-	
-	@Test
-	void goToPakkerTest() {
-	nybruker.goToPakker();
-	
-	
-	}
-	
-	
-	
-	
+
 	@AfterMethod
-	public void tearDown(ITestResult result) throws IOException{
-		if (result.getStatus()==ITestResult.FAILURE) {
-			extentTest.log (LogStatus.FAIL, "Test Case Failed -"+ result.getName());//to add name in extent Report
-		    extentTest.log (LogStatus.FAIL, "Test Case Failed -"+ result.getThrowable());// to add error/exception in extent report
-		
-		    String screenshotPath = FrontpageTest.getScreenshot(driver, result.getName());
-		
-		    extentTest.log(LogStatus.FAIL, extentTest.addScreenCapture(screenshotPath));// to add screenshot in extent report
-		}
-		else if(result.getStatus()==ITestResult.SKIP){
+	public void tearDown(ITestResult result) throws IOException {
+		if (result.getStatus() == ITestResult.FAILURE) {
+			extentTest.log(LogStatus.FAIL, "Test Case Failed -" + result.getName());// to add name in extent Report
+			extentTest.log(LogStatus.FAIL, "Test Case Failed -" + result.getThrowable());// to add error/exception in
+																							// extent report
+
+			String screenshotPath = FrontpageTest.getScreenshot(driver, result.getName());
+
+			extentTest.log(LogStatus.FAIL, extentTest.addScreenCapture(screenshotPath));// to add screenshot in extent
+																						// report
+		} else if (result.getStatus() == ITestResult.SKIP) {
 			extentTest.log(LogStatus.SKIP, result.getName());
-		}
-		else if(result.getStatus()==ITestResult.SUCCESS){
+		} else if (result.getStatus() == ITestResult.SUCCESS) {
 			extentTest.log(LogStatus.PASS, result.getName());
 		}
-		extent.endTest(extentTest); //ending test and ends the current test and prepare to create html report
+		extent.endTest(extentTest); // ending test and ends the current test and prepare to create html report
 		driver.quit();
 	}
 
-	
 	@AfterTest
-	public void endReport () {
+	public void endReport() {
 		extent.flush();
 		extent.close();
 	}
-	
 
-	
-	
 }
-

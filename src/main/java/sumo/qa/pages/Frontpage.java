@@ -84,7 +84,7 @@ public class Frontpage extends TestBase {
 		FåTilgang.click();
 	}
 
-	public void logginnFunction() throws InterruptedException {
+	public HomePage logginnFunction() throws InterruptedException {
 
 		LogginnTriggerLink.click();
 
@@ -97,6 +97,7 @@ public class Frontpage extends TestBase {
 		// Password.sendKeys(Keys.RETURN); // by using keyboard Enter
 		LogginnBtn.click();// by using mouse
 		Thread.sleep(1500);
+		return new HomePage ();
 	}
 
 	public void clickOn_LogginnAvbrytBtn() {
