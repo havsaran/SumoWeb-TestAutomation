@@ -35,8 +35,7 @@ public class NybrukerTest extends TestBase {
 	@BeforeMethod
 	public void setUp() throws InterruptedException {
 		initialization();
-		
-		nybruker = new Nybruker();
+				nybruker = new Nybruker();
 		}
 
 	@Test
