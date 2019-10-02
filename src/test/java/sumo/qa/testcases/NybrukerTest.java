@@ -15,7 +15,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 import sumo.qa.base.TestBase;
-import sumo.qa.pages.Frontpage;
+
 import sumo.qa.pages.Nybruker;
 import sumo.qa.pages.Pakker;
 
