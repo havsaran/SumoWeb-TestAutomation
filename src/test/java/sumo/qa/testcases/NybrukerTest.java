@@ -45,7 +45,7 @@ public class NybrukerTest extends TestBase {
 		extentTest = extent.startTest("goToPakkerTest_Testcase");
 		pakker = nybruker.goToPakker();
 	
-	Assert.assertEquals(pakker.VelgPakke.isDisplayed(), true, "Assert is not matcehddddddd");
+	Assert.assertEquals(pakker.VelgPakke.isDisplayed(), true, "Assert is notttttt matcehddddd");
 
 	}
 
