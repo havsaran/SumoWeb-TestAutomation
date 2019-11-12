@@ -48,17 +48,24 @@ public class FrontpageTest extends TestBase {
 		extentTest = extent.startTest("LogginnFunction_Testcase");
 
 		frontpage.logginnFunction();
-
+		Thread.sleep(5000);
 		boolean flag = false;
+		
+		try {
+			frontpage.LogginnBtn.click();
+			Assert.assertEquals(flag, true, "Wrong username/password");
+			}
+		catch (Exception excep) {
 
 		try {
 			frontpage.GlemtPassord.click();
-			Assert.assertEquals(flag, true, "LogginnFunction_Testcase is not clickable");
-		} catch (Exception excep) {
+			Assert.assertEquals(flag, true, "LogginnFunction_Testcase is not clickable, caught in try block");
+		} catch (Exception excep1) {
 			flag = true;
-			Assert.assertEquals(flag, true, "LogginnFunction_Testcase is not clickable");
+			Assert.assertEquals(flag, true, "LogginnFunction_Testcase is not clickable, caught in catch block");
 			// System.out.println(excep.getMessage());
 		}
+	}
 	}
 
 	@Test(priority = 2)
@@ -167,11 +174,5 @@ public class FrontpageTest extends TestBase {
 
 	}
 
-//	@Test(priority=1)
-//	public void FåTilgangBtn_Click_Testcase(){		
-//		frontpage.clickOn_FåtilgangBtn();	
-//		System.out.println(driver.getTitle());
-//		Assert.assertEquals(driver.getTitle(), "Velkommen | TV 2 Sumo", "Fåtilgang Button is not working ");
-//			}
 
 }

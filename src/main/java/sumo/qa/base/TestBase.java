@@ -25,13 +25,13 @@ public class TestBase {
 	public ExtentReports extent;
 	public ExtentTest logger;
 
-	static Xls_Reader reader = new Xls_Reader("C:\\Users\\speriy\\Desktop\\xlData.xlsx");
-	static int RowNo = 3;
+	static Xls_Reader reader = new Xls_Reader("C:\\Users\\speriy\\Desktop\\SumoWebData.xlsx");
+	static int RowNo = 2;
 	public static String url = reader.getCellData("Sheet1", "url", RowNo);
 	public static String browserName = reader.getCellData("Sheet1", "browser", RowNo);
 
-	public  String user = reader.getCellData("Sheet1", "username", RowNo);
-	public  String pass = reader.getCellData("Sheet1", "password", RowNo);
+	public String user = reader.getCellData("Sheet1", "username", RowNo);
+	public String pass = reader.getCellData("Sheet1", "password", RowNo);
 
 // 	TestBase constructor
 	public TestBase() {
@@ -53,16 +53,15 @@ public class TestBase {
 
 // Browser initialization
 	public static void initialization() throws InterruptedException {
-				
-		//String browserName = prop.getProperty("browser");
+
+		// String browserName = prop.getProperty("browser");
 
 		String OS = System.getProperty("os.name");
 
 		if (OS.toUpperCase().contains("WINDOWS")) {
 
 			if (browserName.equals("chrome")) {
-				System.setProperty("webdriver.chrome.driver",
-						"C:\\Files needed for Testing Automation\\chromedriver_win32\\chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver","C:\\Files needed for Testing Automation\\chromedriver_win32\\chromedriver.exe");
 				System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 				driver = new ChromeDriver();
 			} else if (browserName.equals("FF")) {
@@ -74,7 +73,7 @@ public class TestBase {
 		else if (OS.toUpperCase().contains("MAC")) {
 
 			if (browserName.equals("chrome")) {
-				 System.setProperty("webdriver.chrome.driver", "C:\\Files needed for Testing Automation\\chromedriver_win32\\chromedriver.exe");
+			 System.setProperty("webdriver.chrome.driver", "C:\\Files needed for Testing Automation\\chromedriver_win32\\chromedriver.exe");
 				System.setProperty("webdriver.chrome.driver", "chromedriver");
 				driver = new ChromeDriver();
 			} else if (browserName.equals("FF")) {
@@ -87,10 +86,10 @@ public class TestBase {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PageLoadTimeOut, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.ImplicityWait, TimeUnit.SECONDS);
-		 
-		//driver.get(prop.getProperty("url"));
-			driver.get(url);
-			
+
+		// driver.get(prop.getProperty("url"));
+		driver.get(url);
+
 		Thread.sleep(TestUtil.sleepTime);
 
 	}

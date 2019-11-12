@@ -23,8 +23,8 @@ public class NybrukerTest extends TestBase {
 	Nybruker nybruker;
 	Pakker pakker;
 	
-	public ExtentReports extent;
-	public ExtentTest extentTest;
+	public  ExtentReports extent;
+	public  ExtentTest extentTest;
 
 	@BeforeTest
 	public void setExtent() {

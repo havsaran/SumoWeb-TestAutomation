@@ -41,7 +41,7 @@ public class Frontpage extends TestBase {
 	private WebElement Password;
 
 	@FindBy(xpath = "//span[@class='button__text'][contains(text(),'Logg inn')]//parent::button")
-	private WebElement LogginnBtn;
+	public WebElement LogginnBtn;
 
 	@FindBy(xpath = "//span[@class='dropdown__trigger-text']")
 	public WebElement ValidateLoggedinnPage;
@@ -95,6 +95,7 @@ public class Frontpage extends TestBase {
 		Password.sendKeys(pass);
 
 		// Password.sendKeys(Keys.RETURN); // by using keyboard Enter
+		Thread.sleep(1000);
 		LogginnBtn.click();// by using mouse
 		Thread.sleep(1500);
 		return new HomePage ();

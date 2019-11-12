@@ -2,39 +2,39 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-10-01T08:56:52Z" name="Default suite" finished-at="2019-10-01T08:57:12Z" duration-ms="19606">
+  <suite started-at="2019-11-12T09:06:51Z" name="Default suite" finished-at="2019-11-12T09:07:19Z" duration-ms="28051">
     <groups>
     </groups>
-    <test started-at="2019-10-01T08:56:52Z" name="Default test" finished-at="2019-10-01T08:57:12Z" duration-ms="19606">
-      <class name="sumo.qa.testcases.NybrukerTest">
-        <test-method is-config="true" signature="setExtent()[pri:0, instance:sumo.qa.testcases.NybrukerTest@616fe72b]" started-at="2019-10-01T08:56:52Z" name="setExtent" finished-at="2019-10-01T08:56:54Z" duration-ms="1152" status="PASS">
+    <test started-at="2019-11-12T09:06:51Z" name="Default test" finished-at="2019-11-12T09:07:19Z" duration-ms="28051">
+      <class name="sumo.qa.testcases.FrontpageTest">
+        <test-method is-config="true" signature="setExtent()[pri:0, instance:sumo.qa.testcases.FrontpageTest@34f22f9d]" started-at="2019-11-12T09:06:51Z" name="setExtent" finished-at="2019-11-12T09:06:51Z" duration-ms="116" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setExtent -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:sumo.qa.testcases.NybrukerTest@616fe72b]" started-at="2019-10-01T08:56:54Z" name="setUp" finished-at="2019-10-01T08:57:06Z" duration-ms="12066" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:sumo.qa.testcases.FrontpageTest@34f22f9d]" started-at="2019-11-12T09:06:51Z" name="setUp" finished-at="2019-11-12T09:07:00Z" duration-ms="8719" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="goToPakkerTest()[pri:0, instance:sumo.qa.testcases.NybrukerTest@616fe72b]" started-at="2019-10-01T08:57:06Z" name="goToPakkerTest" finished-at="2019-10-01T08:57:08Z" duration-ms="2448" status="PASS">
+        <test-method signature="LogginnFunction_Test()[pri:1, instance:sumo.qa.testcases.FrontpageTest@34f22f9d]" started-at="2019-11-12T09:07:00Z" name="LogginnFunction_Test" finished-at="2019-11-12T09:07:18Z" duration-ms="18198" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- goToPakkerTest -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.NybrukerTest@616fe72b]" started-at="2019-10-01T08:57:08Z" name="tearDown" finished-at="2019-10-01T08:57:09Z" duration-ms="749" status="PASS">
+        </test-method> <!-- LogginnFunction_Test -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.FrontpageTest@34f22f9d]" started-at="2019-11-12T09:07:18Z" name="tearDown" finished-at="2019-11-12T09:07:19Z" duration-ms="790" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=goToPakkerTest status=SUCCESS method=NybrukerTest.goToPakkerTest()[pri:0, instance:sumo.qa.testcases.NybrukerTest@616fe72b] output={null}]]]>
+                <![CDATA[[TestResult name=LogginnFunction_Test status=SUCCESS method=FrontpageTest.LogginnFunction_Test()[pri:1, instance:sumo.qa.testcases.FrontpageTest@34f22f9d] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="endReport()[pri:0, instance:sumo.qa.testcases.NybrukerTest@616fe72b]" started-at="2019-10-01T08:57:09Z" name="endReport" finished-at="2019-10-01T08:57:12Z" duration-ms="3072" status="PASS">
+        <test-method is-config="true" signature="endReport()[pri:0, instance:sumo.qa.testcases.FrontpageTest@34f22f9d]" started-at="2019-11-12T09:07:19Z" name="endReport" finished-at="2019-11-12T09:07:19Z" duration-ms="206" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
-      </class> <!-- sumo.qa.testcases.NybrukerTest -->
+      </class> <!-- sumo.qa.testcases.FrontpageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
