@@ -95,9 +95,9 @@ public class Frontpage extends TestBase {
 		Password.sendKeys(pass);
 
 		// Password.sendKeys(Keys.RETURN); // by using keyboard Enter
-		Thread.sleep(1000);
-		LogginnBtn.click();// by using mouse
 		Thread.sleep(1500);
+		LogginnBtn.click();// by using mouse
+		Thread.sleep(3000);
 		return new HomePage ();
 	}
 

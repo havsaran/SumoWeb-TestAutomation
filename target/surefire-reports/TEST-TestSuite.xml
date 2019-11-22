@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="69.708" tests="6" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="106.905" tests="6" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.3+12-LTS"/>
@@ -25,7 +25,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Users\speriy\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5773860625301397404.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\speriy\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf661361806326265505.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk-11.0.3_windows-x64_bin\jdk-11.0.3\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_231/bin/server;C:/Program Files/Java/jre1.8.0_231/bin;C:/Program Files/Java/jre1.8.0_231/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_221\bin;C:\Files needed for Testing Automation\apache-maven-3.6.1-bin\apache-maven-3.6.1\bin;C:\Users\speriy\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Git\bin;C:\Files needed for Testing Automation\Jenkins;C:\Users\speriy\AppData\Local\Android\Sdk\platform-tools;C:\Users\speriy\AppData\Local\Android\Sdk\tools;C:\Users\speriy\AppData\Local\Android\Sdk\tools\bin;C:\Users\speriy\AppData\Local\GitHubDesktop\bin;C:\Users\speriy\Downloads\eclipse-jee-2018-12-R-win32-x86_64\eclipse;;."/>
     <property name="jdk.debug" value="release"/>
@@ -42,7 +42,7 @@
     <property name="java.class.path" value="C:\Users\speriy\Downloads\eclipse-jee-2018-12-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_1.10.0.20181127-2120\jars\plexus-classworlds-2.5.2.jar"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B install"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-11.0.3_windows-x64_bin\jdk-11.0.3"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -60,20 +60,32 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="LogginnFunction_Test" classname="sumo.qa.testcases.FrontpageTest" time="8.146">
-    <failure message="Wrong username/password expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: Wrong username/password expected [true] but found [false]
-	at sumo.qa.testcases.FrontpageTest.LogginnFunction_Test(FrontpageTest.java:56)
+  <testcase name="LogginnFunction_Test" classname="sumo.qa.testcases.FrontpageTest" time="21.318"/>
+  <testcase name="GlemtPassordLink_Click_Test" classname="sumo.qa.testcases.FrontpageTest" time="0.435"/>
+  <testcase name="NyBruker_FaatilgangNaaLink_Test" classname="sumo.qa.testcases.FrontpageTest" time="0.795"/>
+  <testcase name="logginnBtn_Click_Test" classname="sumo.qa.testcases.FrontpageTest" time="0.256"/>
+  <testcase name="LogginnAvbrytBtn_Click_Test" classname="sumo.qa.testcases.FrontpageTest" time="7.31"/>
+  <testcase name="SumoLogo_Click_Test" classname="sumo.qa.testcases.FrontpageTest" time="5.043">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@class=&apos;header__logo&apos;]//*[@class=&apos;svglogo svglogo-sumo-white&apos;]&quot;}&#10;  (Session info: chrome=78.0.3904.108)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;PC7425&apos;, ip: &apos;10.53.33.251&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.3&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\speriy\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:63342}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: 4eb0b4bd5504eb8670687ac0f99c6cd5&#10;*** Element info: {Using=xpath, value=//a[@class=&apos;header__logo&apos;]//*[@class=&apos;svglogo svglogo-sumo-white&apos;]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class='header__logo']//*[@class='svglogo svglogo-sumo-white']"}
+  (Session info: chrome=78.0.3904.108)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PC7425', ip: '10.53.33.251', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\speriy\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:63342}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 4eb0b4bd5504eb8670687ac0f99c6cd5
+*** Element info: {Using=xpath, value=//a[@class='header__logo']//*[@class='svglogo svglogo-sumo-white']}
+	at sumo.qa.testcases.FrontpageTest.SumoLogo_Click_Test(FrontpageTest.java:127)
 </failure>
-    <system-err><![CDATA[Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 44770
+    <system-out><![CDATA[Credentials saved to C:\Users\speriy\.credentials
+Credentials saved to C:\Users\speriy\.credentials
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 36275
 Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-Nov 12, 2019 9:42:11 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+Nov 22, 2019 10:34:39 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
   </testcase>
-  <testcase name="GlemtPassordLink_Click_Test" classname="sumo.qa.testcases.FrontpageTest" time="0.319"/>
-  <testcase name="NyBruker_FaatilgangNaaLink_Test" classname="sumo.qa.testcases.FrontpageTest" time="0.308"/>
-  <testcase name="logginnBtn_Click_Test" classname="sumo.qa.testcases.FrontpageTest" time="0.193"/>
-  <testcase name="LogginnAvbrytBtn_Click_Test" classname="sumo.qa.testcases.FrontpageTest" time="7.235"/>
-  <testcase name="SumoLogo_Click_Test" classname="sumo.qa.testcases.FrontpageTest" time="2.111"/>
 </testsuite>

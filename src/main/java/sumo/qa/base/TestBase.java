@@ -14,6 +14,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 
+import sumo.qa.util.GoogleSheetAPI;
 import sumo.qa.util.TestUtil;
 import sumo.qa.util.Xls_Reader;
 
@@ -25,13 +26,23 @@ public class TestBase {
 	public ExtentReports extent;
 	public ExtentTest logger;
 
-	static Xls_Reader reader = new Xls_Reader("C:\\Users\\speriy\\Desktop\\SumoWebData.xlsx");
-	static int RowNo = 2;
-	public static String url = reader.getCellData("Sheet1", "url", RowNo);
-	public static String browserName = reader.getCellData("Sheet1", "browser", RowNo);
-
-	public String user = reader.getCellData("Sheet1", "username", RowNo);
-	public String pass = reader.getCellData("Sheet1", "password", RowNo);
+//	static Xls_Reader reader = new Xls_Reader("C:\\Users\\speriy\\Desktop\\SumoWebData.xlsx");
+//	static int RowNo = 2;
+//	public static String url = reader.getCellData("Sheet1", "url", RowNo);
+//	public static String browserName = reader.getCellData("Sheet1", "browser", RowNo);
+//
+//	public String user = reader.getCellData("Sheet1", "username", RowNo);
+//	public String pass = reader.getCellData("Sheet1", "password", RowNo);
+	
+	static GoogleSheetAPI sheetreader = new GoogleSheetAPI ();
+	static int RowNo = 1;
+	
+	public static String url = sheetreader.getSpreadSheetRecordsCellData(RowNo,0);	
+	public String user = sheetreader.getSpreadSheetRecordsCellData(RowNo,1);
+	public String pass = sheetreader.getSpreadSheetRecordsCellData(RowNo,2);
+	public static String browserName = sheetreader.getSpreadSheetRecordsCellData(RowNo,3);
+	
+	
 
 // 	TestBase constructor
 	public TestBase() {
