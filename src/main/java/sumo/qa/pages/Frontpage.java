@@ -53,7 +53,7 @@ public class Frontpage extends TestBase {
 
 	// SumoLogo/image
 
-	@FindBy(xpath = "//a[@class='header__logo']//*[@class='svglogo svglogo-sumo-white']")
+	@FindBy(xpath = "//a[@class='logo']//*[@class='svglogo svglogo-sumo-white']")//div[@class='header__inner']//*[@class='svglogo svglogo-sumo-white']
 	private WebElement SumoLogo;
 
 	// Actions /functions
@@ -114,7 +114,13 @@ public class Frontpage extends TestBase {
 	}
 
 	public void clickOn_SumoLogo() {
-
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
 		SumoLogo.click();
 		try {
 			Thread.sleep(2000);
