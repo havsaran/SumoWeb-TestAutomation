@@ -16,36 +16,53 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import sumo.qa.base.TestBase;
 import sumo.qa.pages.Frontpage;
 
+import sumo.qa.ExtentReportListener.*;
+
+@Listeners ({TestAllureListener.class})
 public class FrontpageTest extends TestBase {
+	
+	//WebDriver driver;
 	Frontpage frontpage;
 
-	public ExtentReports extent;
-	public ExtentTest extentTest;
+//	public ExtentReports extent;
+//	public ExtentTest extentTest;
 
-	@BeforeTest
-	public void setExtent() {
-		extent = new ExtentReports(System.getProperty("user.dir") + "/test-output/ExtentReport.html", true);
-	}
+//	@BeforeTest
+//	public void setExtent() {
+//		extent = new ExtentReports(System.getProperty("user.dir") + "/test-output/ExtentReport.html", true);
+//	}
 
 	@BeforeMethod
 	public void setUp() throws InterruptedException {
-		initialization();
+				driver = initialization();
+		driver.get(url);
 		frontpage = new Frontpage();
 	}
 
+	@Severity(SeverityLevel.BLOCKER)	
+	@Description ("This method is checking if the loggin function works fine")
+	@Feature ("Loggin- checking")
+	@Story ("positive testcase")
+	
 	@Test(priority = 1)
 
 	public void LogginnFunction_Test() throws InterruptedException {
-		extentTest = extent.startTest("LogginnFunction_Testcase");
+		//extentTest = extent.startTest("LogginnFunction_Testcase");
 
 		frontpage.logginnFunction();
 		Thread.sleep(5000);
@@ -68,20 +85,28 @@ public class FrontpageTest extends TestBase {
 	}
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2,description="Glemte pass")
+	@Severity(SeverityLevel.BLOCKER)	
+	@Description ("This method is checking if the foget password links works fine")
+	@Feature ("forget pass link- checking")
+	@Story ("positive testcase")
 	public void GlemtPassordLink_Click_Test() {
-		extentTest = extent.startTest("GlemtPassordLink_Click_Testcase");
+		//extentTest = extent.startTest("GlemtPassordLink_Click_Testcase");
 
 		frontpage.clickOnGlemtPassordLink();
-		Assert.assertEquals(frontpage.GlemtPassordVerifyText.getText(), "Få passord",
+		Assert.assertEquals(frontpage.GlemtPassordVerifyText.getText(), "Få passord123",
 				"Glemt Passordlink is not working");
 
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 3,description="NyBruker")
+	@Severity(SeverityLevel.BLOCKER)	
+	@Description ("This method is checking if the new user link works fine")
+	@Feature ("Loggin- checking")
+	@Story ("negative testcase")
 	public void NyBruker_FaatilgangNaaLink_Test() {
 
-		extentTest = extent.startTest("NyBruker_FåtilgangNåLink_Testcase");
+//		extentTest = extent.startTest("NyBruker_FåtilgangNåLink_Testcase");
 
 		frontpage.clickOn_NyBruker_FåtilgangNåBtn();
 		// Assert.assertEquals(frontpage.NybrukerFåtilgangverifyText.getText(),
@@ -93,7 +118,7 @@ public class FrontpageTest extends TestBase {
 	@Test(priority = 4)
 	public void logginnBtn_Click_Test() {
 
-		extentTest = extent.startTest("logginnBtn_Click_Testcase");
+		//extentTest = extent.startTest("logginnBtn_Click_Testcase");
 		frontpage.clickOn_LoggInnBtn();
 		Assert.assertEquals(frontpage.LogginnVerifyText.getText(), "Logg inn", "Logginn Button is not working ");
 		// System.out.println(frontpage.LogginnVerifyText.getText());
@@ -101,7 +126,7 @@ public class FrontpageTest extends TestBase {
 
 	@Test(priority = 5)
 	public void LogginnAvbrytBtn_Click_Test() {
-		extentTest = extent.startTest("LogginnAvbrytBtn_Click_Testcase");
+		//extentTest = extent.startTest("LogginnAvbrytBtn_Click_Testcase");
 		// frontpage.clickOn_LogginnAvbrytBtn();
 
 		boolean flag = false;
@@ -120,10 +145,16 @@ public class FrontpageTest extends TestBase {
 
 	@Test(priority = 6)
 	public void SumoLogo_Click_Test() {
-		extentTest = extent.startTest("SumoLogo_Click_Testcase");
+		//extentTest = extent.startTest("SumoLogo_Click_Testcase");
 
 		// System.out.println(driver.getTitle());
-
+		
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		frontpage.clickOn_SumoLogo();
 
 		boolean flag = frontpage.FåTilgang.isDisplayed();
@@ -134,45 +165,45 @@ public class FrontpageTest extends TestBase {
 
 	@AfterMethod
 	public void tearDown(ITestResult result) throws IOException {
-		if (result.getStatus() == ITestResult.FAILURE) {
-			extentTest.log(LogStatus.FAIL, "Test Case Failed -" + result.getName());// to add name in extent Report
-			extentTest.log(LogStatus.FAIL, "Test Case Failed -" + result.getThrowable());// to add error/exception in
-																							// extent report
-
-			String screenshotPath = FrontpageTest.getScreenshot(driver, result.getName());
-
-			extentTest.log(LogStatus.FAIL, extentTest.addScreenCapture(screenshotPath));// to add screenshot in extent
-																						// report
-		} else if (result.getStatus() == ITestResult.SKIP) {
-			extentTest.log(LogStatus.SKIP, result.getName());
-		} else if (result.getStatus() == ITestResult.SUCCESS) {
-			extentTest.log(LogStatus.PASS, result.getName());
-		}
-		extent.endTest(extentTest); // ending test and ends the current test and prepare to create html report
+//		if (result.getStatus() == ITestResult.FAILURE) {
+//			extentTest.log(LogStatus.FAIL, "Test Case Failed -" + result.getName());// to add name in extent Report
+//			extentTest.log(LogStatus.FAIL, "Test Case Failed -" + result.getThrowable());// to add error/exception in
+//																							// extent report
+//
+//			String screenshotPath = FrontpageTest.getScreenshot(driver, result.getName());
+//
+//			extentTest.log(LogStatus.FAIL, extentTest.addScreenCapture(screenshotPath));// to add screenshot in extent
+//																						// report
+//		} else if (result.getStatus() == ITestResult.SKIP) {
+//			extentTest.log(LogStatus.SKIP, result.getName());
+//		} else if (result.getStatus() == ITestResult.SUCCESS) {
+//			extentTest.log(LogStatus.PASS, result.getName());
+//		}
+//		extent.endTest(extentTest); // ending test and ends the current test and prepare to create html report
 		driver.quit();
 	}
 
-	@AfterTest
-	public void endReport() {
-		extent.flush();
-		extent.close();
-	}
+//	@AfterTest
+//	public void endReport() {
+//		extent.flush();
+//		extent.close();
+//	}
 
-	public static String getScreenshot(WebDriver driver, String screenshotName) throws IOException {
-
-		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-
-		TakesScreenshot ts = (TakesScreenshot) driver;
-		File source = ts.getScreenshotAs(OutputType.FILE);
-		// after execution, you could see a folder "FailedTestsScreenshots"
-
-		String destination = System.getProperty("user.dir") + "/FailedTestsScreenshots/" + screenshotName + dateName
-				+ ".png";
-		File finalDestination = new File(destination);
-		FileUtils.copyFile(source, finalDestination);
-		return destination;
-
-	}
+//	public static String getScreenshot(WebDriver driver, String screenshotName) throws IOException {
+//
+//		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+//
+//		TakesScreenshot ts = (TakesScreenshot) driver;
+//		File source = ts.getScreenshotAs(OutputType.FILE);
+//		// after execution, you could see a folder "FailedTestsScreenshots"
+//
+//		String destination = System.getProperty("user.dir") + "/FailedTestsScreenshots/" + screenshotName + dateName
+//				+ ".png";
+//		File finalDestination = new File(destination);
+//		FileUtils.copyFile(source, finalDestination);
+//		return destination;
+//
+//	}
 
 
 }

@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite parallel="true" name="TV 2 Sumo Automation Test Suite">
+<suite parallel = "true" name="TV 2 Sumo Automation Test Suite">
 
-	<listeners>
-		<listener class-name="sumo.qa.ExtentReportListener.ExtentReporterNG" />
-	</listeners>
-
-
-	<test name="TV 2 sumo Test Cases">
+	<test thread-count="2" name="TV 2 sumo Test Cases">
 		<classes>
 		
 			 <class name="sumo.qa.testcases.FrontpageTest"/>
-			 <!-- second class is commented here -->
-					<!--  <class name="sumo.qa.testcases.NybrukerTest"/> -->
+			  <class name="sumo.qa.testcases.NybrukerTest"/>
+		
+			
 							
 		</classes>
 	</test>
 </suite>
+
 

@@ -1,0 +1,1 @@
+{"uuid":"2718aae7-e44c-4d76-8e48-22270282c98c","name":"sumo.qa.testcases.NybrukerTest.setUp","description":"","start":1575905608974,"stop":1575905621472,"children":["e61f87e8-38a2-4abc-b8c6-65c6cad29ffb"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","start":1575905608974,"stop":1575905621471}]}

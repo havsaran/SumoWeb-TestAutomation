@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="169.114" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="121.599" tests="7" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_221\jre\bin"/>
@@ -28,7 +28,7 @@
     <property name="os.name" value="Windows 10"/>
     <property name="classworlds.conf" value="C:\Files needed for Testing Automation\apache-maven-3.6.1-bin\apache-maven-3.6.1\bin\..\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_221\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_221\bin;C:\Files needed for Testing Automation\apache-maven-3.6.1-bin\apache-maven-3.6.1\bin;C:\Users\speriy\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Git\bin;C:\Files needed for Testing Automation\Jenkins;C:\Users\speriy\AppData\Local\Android\Sdk\platform-tools;C:\Users\speriy\AppData\Local\Android\Sdk\tools;C:\Users\speriy\AppData\Local\Android\Sdk\tools\bin;C:\Users\speriy\AppData\Local\GitHubDesktop\bin;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_221\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_221\bin;C:\Files needed for Testing Automation\Allure\allure-2.13.0\bin;C:\Files needed for Testing Automation\apache-maven-3.6.1-bin\apache-maven-3.6.1\bin;C:\Users\speriy\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Git\bin;C:\Files needed for Testing Automation\Jenkins;C:\Users\speriy\AppData\Local\Android\Sdk\platform-tools;C:\Users\speriy\AppData\Local\Android\Sdk\tools;C:\Users\speriy\AppData\Local\Android\Sdk\tools\bin;C:\Users\speriy\AppData\Local\GitHubDesktop\bin;C:\Files needed for Testing Automation\Allure\allure-2.13.0\bin;;."/>
     <property name="maven.conf" value="C:\Files needed for Testing Automation\apache-maven-3.6.1-bin\apache-maven-3.6.1\bin\../conf"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
@@ -64,10 +64,43 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="LogginnFunction_Test" classname="sumo.qa.testcases.FrontpageTest" time="21.959"/>
-  <testcase name="GlemtPassordLink_Click_Test" classname="sumo.qa.testcases.FrontpageTest" time="1.269"/>
-  <testcase name="NyBruker_FaatilgangNaaLink_Test" classname="sumo.qa.testcases.FrontpageTest" time="1.748"/>
-  <testcase name="logginnBtn_Click_Test" classname="sumo.qa.testcases.FrontpageTest" time="0.768"/>
-  <testcase name="LogginnAvbrytBtn_Click_Test" classname="sumo.qa.testcases.FrontpageTest" time="8.177"/>
-  <testcase name="SumoLogo_Click_Test" classname="sumo.qa.testcases.FrontpageTest" time="5.487"/>
+  <testcase name="goToPakkerTest" classname="sumo.qa.testcases.NybrukerTest" time="2.535"/>
+  <testcase name="LogginnFunction_Test" classname="sumo.qa.testcases.FrontpageTest" time="21.593"/>
+  <testcase name="GlemtPassordLink_Click_Test" classname="sumo.qa.testcases.FrontpageTest" time="0.858">
+    <failure message="Glemt Passordlink is not working expected [Få passord123] but found [Få passord]" type="java.lang.AssertionError">java.lang.AssertionError: Glemt Passordlink is not working expected [Få passord123] but found [Få passord]
+	at sumo.qa.testcases.FrontpageTest.GlemtPassordLink_Click_Test(FrontpageTest.java:97)
+</failure>
+    <system-out><![CDATA[Credentials saved to C:\Users\speriy\.credentials
+Credentials saved to C:\Users\speriy\.credentials
+I am in onTestStart method GlemtPassordLink_Click_Test start
+I am in onTestFailure method GlemtPassordLink_Click_Test failed
+Screenshot captured for test case:GlemtPassordLink_Click_Test
+]]></system-out>
+    <system-err><![CDATA[1575905655933	Marionette	INFO	Stopped listening on port 57268
+[Parent 2160, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1572401533/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13232, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1572401533/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13232, Chrome_ChildThread] [Child 3424, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1572401533/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3424, Chrome_ChildThread] WARNING: [Child 11892, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1572401533/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11892, Chrome_ChildThread] WARNI
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 4528, Chrome_ChildThread]
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1575905657954	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\speriy\\AppData\\Local\\Temp\\rust_mozprofileah70f3"
+1575905658348	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1575905658348	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1575905658348	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1575905658348	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1575905660179	Marionette	INFO	Listening on port 57320
+1575905660674	Marionette	WARN	TLS certificate errors will be ignored for this session
+Dec 09, 2019 4:34:20 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="NyBruker_FaatilgangNaaLink_Test" classname="sumo.qa.testcases.FrontpageTest" time="0.683"/>
+  <testcase name="logginnBtn_Click_Test" classname="sumo.qa.testcases.FrontpageTest" time="0.366"/>
+  <testcase name="LogginnAvbrytBtn_Click_Test" classname="sumo.qa.testcases.FrontpageTest" time="7.606"/>
+  <testcase name="SumoLogo_Click_Test" classname="sumo.qa.testcases.FrontpageTest" time="6.603"/>
 </testsuite>

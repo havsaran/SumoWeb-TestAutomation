@@ -14,17 +14,19 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import sumo.qa.util.GoogleSheetAPI;
 import sumo.qa.util.TestUtil;
 import sumo.qa.util.Xls_Reader;
 
 public class TestBase {
 
-	public static WebDriver driver;
+	
+	public WebDriver driver;
 	public static Properties prop;
-
-	public ExtentReports extent;
-	public ExtentTest logger;
+	public static ThreadLocal<WebDriver> tdriver = new ThreadLocal<WebDriver>();
+//	public ExtentReports extent;
+//	public ExtentTest logger;
 
 //	static Xls_Reader reader = new Xls_Reader("C:\\Users\\speriy\\Desktop\\SumoWebData.xlsx");
 //	static int RowNo = 2;
@@ -60,49 +62,74 @@ public class TestBase {
 			e.printStackTrace();
 		}
 
-	}
+}
 
 // Browser initialization
-	public static void initialization() throws InterruptedException {
+	public  WebDriver initialization() throws InterruptedException {
 
 		// String browserName = prop.getProperty("browser");
 
-		String OS = System.getProperty("os.name");
+		//String OS = System.getProperty("os.name");
 
-		if (OS.toUpperCase().contains("WINDOWS")) {
+//		if (OS.toUpperCase().contains("WINDOWS")) {
+//
+//			if (browserName.equals("chrome")) {
+//				System.setProperty("webdriver.chrome.driver","C:\\Files needed for Testing Automation\\chromedriver_win32\\chromedriver.exe");
+//				System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+//				driver = new ChromeDriver();
+//			} else if (browserName.equals("FF")) {
+//				System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
+//				driver = new FirefoxDriver();
+//			}
+//		}
+//
+//		else if (OS.toUpperCase().contains("MAC")) {
+//
+//			if (browserName.equals("chrome")) {
+//			 System.setProperty("webdriver.chrome.driver", "C:\\Files needed for Testing Automation\\chromedriver_win32\\chromedriver.exe");
+//				System.setProperty("webdriver.chrome.driver", "chromedriver");
+//				driver = new ChromeDriver();
+//			} else if (browserName.equals("FF")) {
+//				System.setProperty("webdriver.gecko.driver", "geckodriver");
+//				driver = new FirefoxDriver();
+//			}
+//		}
 
-			if (browserName.equals("chrome")) {
-				System.setProperty("webdriver.chrome.driver","C:\\Files needed for Testing Automation\\chromedriver_win32\\chromedriver.exe");
-				System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-				driver = new ChromeDriver();
-			} else if (browserName.equals("FF")) {
-				System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
-				driver = new FirefoxDriver();
-			}
+		if (browserName.equals("chrome")) {
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
 		}
-
-		else if (OS.toUpperCase().contains("MAC")) {
-
-			if (browserName.equals("chrome")) {
-			 System.setProperty("webdriver.chrome.driver", "C:\\Files needed for Testing Automation\\chromedriver_win32\\chromedriver.exe");
-				System.setProperty("webdriver.chrome.driver", "chromedriver");
-				driver = new ChromeDriver();
-			} else if (browserName.equals("FF")) {
-				System.setProperty("webdriver.gecko.driver", "geckodriver");
-				driver = new FirefoxDriver();
-			}
+		else if (browserName.equals("FF")) {
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
 		}
-
+		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PageLoadTimeOut, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.ImplicityWait, TimeUnit.SECONDS);
-
-		// driver.get(prop.getProperty("url"));
-		driver.get(url);
-
 		Thread.sleep(TestUtil.sleepTime);
+		
+		
+		tdriver.set(driver);
+		// driver.get(prop.getProperty("url"));
+		
 
+		
+		return getDriver();
 	}
-
+	public static synchronized WebDriver getDriver() {
+		return tdriver.get();
+	}
+//	public WebDriver initialize_driver() {
+//
+//		WebDriverManager.chromedriver().setup();
+//		
+//		driver = new ChromeDriver();
+//		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+//		driver.manage().window().maximize();
+//		tdriver.set(driver);
+//		return getDriver();
+//		
+//	}
 }

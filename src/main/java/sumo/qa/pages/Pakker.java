@@ -12,7 +12,7 @@ public class Pakker extends TestBase {
 	public WebElement VelgPakke;
 
 	public Pakker() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 
 }

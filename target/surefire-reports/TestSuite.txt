@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 169.114 sec - in TestSuite
+Tests run: 7, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 121.599 s <<< FAILURE! - in TestSuite
+GlemtPassordLink_Click_Test(sumo.qa.testcases.FrontpageTest)  Time elapsed: 0.858 s  <<< FAILURE!
+java.lang.AssertionError: Glemt Passordlink is not working expected [Få passord123] but found [Få passord]
+	at sumo.qa.testcases.FrontpageTest.GlemtPassordLink_Click_Test(FrontpageTest.java:97)
+

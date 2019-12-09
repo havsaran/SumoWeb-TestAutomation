@@ -3,6 +3,7 @@ package sumo.qa.pages;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -11,6 +12,7 @@ import sumo.qa.base.TestBase;
 import sumo.qa.util.TestUtil;
 
 public class Frontpage extends TestBase {
+	
 
 	// Page Factory
 
@@ -60,7 +62,7 @@ public class Frontpage extends TestBase {
 
 	public Frontpage() {
 
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 
 	}
 
@@ -69,9 +71,10 @@ public class Frontpage extends TestBase {
 	}
 
 	public void clickOn_NyBruker_FåtilgangNåBtn() {
+		
 		LogginnTriggerLink.click();
-
 		NybrukerFåtilgang.click();
+		
 	}
 
 	public void clickOnGlemtPassordLink() {
