@@ -67,71 +67,85 @@ public class Frontpage extends TestBase {
 	}
 
 	public void clickOn_LoggInnBtn() {
-		LogginnTriggerLink.click();
+		//LogginnTriggerLink.click();
+		click(getDriver(),LogginnTriggerLink,TestUtil.ExplicitWait);
+		
 	}
 
 	public void clickOn_NyBruker_FåtilgangNåBtn() {
 		
-		LogginnTriggerLink.click();
-		NybrukerFåtilgang.click();
+//		LogginnTriggerLink.click();
+//		NybrukerFåtilgang.click();
+		click(getDriver(),LogginnTriggerLink,TestUtil.ExplicitWait);
+		click(getDriver(),NybrukerFåtilgang,TestUtil.ExplicitWait);
 		
 	}
 
 	public void clickOnGlemtPassordLink() {
-		LogginnTriggerLink.click();
-		GlemtPassord.click();
+		//LogginnTriggerLink.click();
+		//GlemtPassord.click();
+		click(getDriver(),LogginnTriggerLink,TestUtil.ExplicitWait );
+		click(getDriver(),GlemtPassord,TestUtil.ExplicitWait);
+		
 	}
 
 	public void clickOn_FåtilgangBtn() {
 
-		FåTilgang.click();
+		//FåTilgang.click();
+		
+		click(getDriver(),FåTilgang,TestUtil.ExplicitWait );
+		
 	}
 
 	public HomePage logginnFunction() throws InterruptedException {
 
-		LogginnTriggerLink.click();
-
-//	String user = prop.getProperty("username");
-//	String pass = prop.getProperty("password");
-
-		UserName.sendKeys(user);
-		Password.sendKeys(pass);
+		//LogginnTriggerLink.click();
+//		UserName.sendKeys(user);
+//		Password.sendKeys(pass);
+		
+		click(getDriver(), LogginnTriggerLink,TestUtil.ExplicitWait);
+		sendKeys(getDriver(), UserName, TestUtil.ExplicitWait,user);	
+		sendKeys(getDriver(), Password, TestUtil.ExplicitWait,pass);
 
 		// Password.sendKeys(Keys.RETURN); // by using keyboard Enter
-		Thread.sleep(1500);
-		LogginnBtn.click();// by using mouse
-		Thread.sleep(3000);
+		//LogginnBtn.click();// by using mouse
+		
+		click(getDriver(), LogginnBtn,TestUtil.ExplicitWait);
 		return new HomePage ();
 	}
 
 	public void clickOn_LogginnAvbrytBtn() {
-		LogginnTriggerLink.click();
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		AvbrytBtn.click();
+//		LogginnTriggerLink.click();
+//		try {
+//			Thread.sleep(2000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		AvbrytBtn.click();
 
+		click(getDriver(), LogginnTriggerLink,TestUtil.ExplicitWait);
+		click(getDriver(), AvbrytBtn,TestUtil.ExplicitWait);
 	}
 
 	public void clickOn_SumoLogo() {
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	
-		SumoLogo.click();
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try {
+//			Thread.sleep(2000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//	
+//		SumoLogo.click();
+//		try {
+//			Thread.sleep(2000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 
+		click(getDriver(), SumoLogo,TestUtil.ExplicitWait);
+		
 	}
 
 }

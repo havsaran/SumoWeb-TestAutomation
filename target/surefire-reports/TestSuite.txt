@@ -1,8 +1,20 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 121.599 s <<< FAILURE! - in TestSuite
-GlemtPassordLink_Click_Test(sumo.qa.testcases.FrontpageTest)  Time elapsed: 0.858 s  <<< FAILURE!
+Tests run: 7, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 97.176 s <<< FAILURE! - in TestSuite
+GlemtPassordLink_Click_Test(sumo.qa.testcases.FrontpageTest)  Time elapsed: 1.139 s  <<< FAILURE!
 java.lang.AssertionError: Glemt Passordlink is not working expected [Få passord123] but found [Få passord]
-	at sumo.qa.testcases.FrontpageTest.GlemtPassordLink_Click_Test(FrontpageTest.java:97)
+	at sumo.qa.testcases.FrontpageTest.GlemtPassordLink_Click_Test(FrontpageTest.java:100)
+
+SumoLogo_Click_Test(sumo.qa.testcases.FrontpageTest)  Time elapsed: 1.769 s  <<< FAILURE!
+org.openqa.selenium.StaleElementReferenceException: 
+stale element reference: element is not attached to the page document
+  (Session info: chrome=78.0.3904.108)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PC7425', ip: '10.53.22.174', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\speriy\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:54795}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1e9280e6af8b86ea9b8f9962065cd264
+	at sumo.qa.testcases.FrontpageTest.SumoLogo_Click_Test(FrontpageTest.java:163)
 

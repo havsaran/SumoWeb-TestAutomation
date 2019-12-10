@@ -8,6 +8,7 @@ import java.util.NoSuchElementException;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -30,7 +31,7 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 import sumo.qa.base.TestBase;
 import sumo.qa.pages.Frontpage;
-
+import sumo.qa.util.TestUtil;
 import sumo.qa.ExtentReportListener.*;
 
 @Listeners ({TestAllureListener.class})
@@ -65,17 +66,20 @@ public class FrontpageTest extends TestBase {
 		//extentTest = extent.startTest("LogginnFunction_Testcase");
 
 		frontpage.logginnFunction();
-		Thread.sleep(5000);
+		
 		boolean flag = false;
 		
 		try {
-			frontpage.LogginnBtn.click();
+			//frontpage.LogginnBtn.click();
+			click(getDriver(), frontpage.LogginnBtn,3);
 			Assert.assertEquals(flag, true, "Wrong username/password");
 			}
 		catch (Exception excep) {
 
 		try {
 			frontpage.GlemtPassord.click();
+			//click(getDriver(), frontpage.GlemtPassord,TestUtil.ExplicitWait);
+			
 			Assert.assertEquals(flag, true, "LogginnFunction_Testcase is not clickable, caught in try block");
 		} catch (Exception excep1) {
 			flag = true;
@@ -143,23 +147,23 @@ public class FrontpageTest extends TestBase {
 
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 1)
 	public void SumoLogo_Click_Test() {
 		//extentTest = extent.startTest("SumoLogo_Click_Testcase");
 
 		// System.out.println(driver.getTitle());
 		
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try {
+//			Thread.sleep(2000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		frontpage.clickOn_SumoLogo();
 
-		boolean flag = frontpage.FåTilgang.isDisplayed();
-
-		Assert.assertEquals(flag, true, "It's redirected different page");
+		boolean flag = display(getDriver(), frontpage.FåTilgang, TestUtil.ExplicitWait);
+		
+		Assert.assertEquals(flag,true, "It's redirected different page");
 
 	}
 

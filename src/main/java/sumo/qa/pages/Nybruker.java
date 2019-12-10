@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import sumo.qa.base.TestBase;
+import sumo.qa.util.TestUtil;
 
 public class Nybruker extends TestBase {
 
@@ -33,7 +34,10 @@ public class Nybruker extends TestBase {
 	// Click methods
 
 	public Pakker goToPakker() throws InterruptedException {
-		Sport_sepakkene_link.click();
+		//Sport_sepakkene_link.click();
+		
+		click (getDriver(),Sport_sepakkene_link,TestUtil.ExplicitWait);
+		
 		//pakkerLink.click();
 		return new Pakker ();
 

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\speriy\AppData\Local\Temp\testng-eclipse--264612166\testng-customsuite.xml</span>
+                    <span>C:\Users\speriy\AppData\Local\Temp\testng-eclipse-2136904521\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods,   7 passed</span>
+                    <span class="method-stats">6 methods, 2 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="sumo.qa.testcases.FrontpageTest" class="method navigator-link" hash-for-method="GlemtPassordLink_Click_Test">GlemtPassordLink_Click_Test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="sumo.qa.testcases.FrontpageTest" class="method navigator-link" hash-for-method="SumoLogo_Click_Test">SumoLogo_Click_Test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,11 +119,6 @@
                       <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
                     <div class="method-list-content passed suite-Default_suite">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="sumo.qa.testcases.FrontpageTest" class="method navigator-link" hash-for-method="GlemtPassordLink_Click_Test">GlemtPassordLink_Click_Test</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="sumo.qa.testcases.FrontpageTest" class="method navigator-link" hash-for-method="LogginnAvbrytBtn_Click_Test">LogginnAvbrytBtn_Click_Test</a> <!-- method navigator-link -->
@@ -118,16 +132,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="sumo.qa.testcases.FrontpageTest" class="method navigator-link" hash-for-method="NyBruker_FaatilgangNaaLink_Test">NyBruker_FaatilgangNaaLink_Test</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="sumo.qa.testcases.FrontpageTest" class="method navigator-link" hash-for-method="SumoLogo_Click_Test">SumoLogo_Click_Test</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="sumo.qa.testcases.NybrukerTest" class="method navigator-link" hash-for-method="goToPakkerTest">goToPakkerTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -147,26 +151,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">sumo.qa.testcases.NybrukerTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="goToPakkerTest">
-                  </a> <!-- goToPakkerTest -->
-                  <span class="method-name">goToPakkerTest</span>
-                  <em>
-(PAkker)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
-          <div class="suite-Default_suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">sumo.qa.testcases.FrontpageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -175,10 +162,93 @@
                   <a name="GlemtPassordLink_Click_Test">
                   </a> <!-- GlemtPassordLink_Click_Test -->
                   <span class="method-name">GlemtPassordLink_Click_Test</span>
+                  <div class="stack-trace">java.lang.AssertionError: Glemt Passordlink is not working expected [Få passord123] but found [Få passord]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at sumo.qa.testcases.FrontpageTest.GlemtPassordLink_Click_Test(FrontpageTest.java:101)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
                   <em>
 (Glemte pass)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SumoLogo_Click_Test">
+                  </a> <!-- SumoLogo_Click_Test -->
+                  <span class="method-name">SumoLogo_Click_Test</span>
+                  <div class="stack-trace">java.lang.AssertionError: It&apos;s redirected different page expected [TV 2 Sumo] but found [Velkommen | TV 2 Sumo]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at sumo.qa.testcases.FrontpageTest.SumoLogo_Click_Test(FrontpageTest.java:166)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">sumo.qa.testcases.FrontpageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="LogginnAvbrytBtn_Click_Test">
@@ -204,13 +274,6 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="SumoLogo_Click_Test">
-                  </a> <!-- SumoLogo_Click_Test -->
-                  <span class="method-name">SumoLogo_Click_Test</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="logginnBtn_Click_Test">
                   </a> <!-- logginnBtn_Click_Test -->
                   <span class="method-name">logginnBtn_Click_Test</span>
@@ -221,7 +284,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\speriy\AppData\Local\Temp\testng-eclipse--264612166\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\speriy\AppData\Local\Temp\testng-eclipse-2136904521\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -230,20 +293,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;sumo.qa.ExtentReportListener.TestAllureListener&quot;/&gt;
-      &lt;class name=&quot;sumo.qa.pages.Nybruker&quot;/&gt;
-      &lt;class name=&quot;sumo.qa.pages.Pakker&quot;/&gt;
-      &lt;class name=&quot;sumo.qa.testcases.HomePageTest&quot;/&gt;
       &lt;class name=&quot;sumo.qa.testcases.FrontpageTest&quot;/&gt;
-      &lt;class name=&quot;sumo.qa.util.Xls_Reader&quot;/&gt;
-      &lt;class name=&quot;sumo.qa.pages.Frontpage&quot;/&gt;
-      &lt;class name=&quot;sumo.qa.testcases.PakkerTest&quot;/&gt;
-      &lt;class name=&quot;sumo.qa.ExtentReportListener.ExtentReporterNG&quot;/&gt;
-      &lt;class name=&quot;sumo.qa.util.TestUtil&quot;/&gt;
-      &lt;class name=&quot;sumo.qa.testcases.NybrukerTest&quot;/&gt;
-      &lt;class name=&quot;sumo.qa.pages.HomePage&quot;/&gt;
-      &lt;class name=&quot;sumo.qa.base.TestBase&quot;/&gt;
-      &lt;class name=&quot;sumo.qa.util.GoogleSheetAPI&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -257,7 +307,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (14 classes)</span>
+                <span class="test-name">Default test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -283,40 +333,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(7);
+data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'LogginnFunction_Test')
 data.setCell(0, 2, 'sumo.qa.testcases.FrontpageTest')
-data.setCell(0, 3, 21149);
+data.setCell(0, 3, 5026);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'LogginnAvbrytBtn_Click_Test')
+data.setCell(1, 1, 'NyBruker_FaatilgangNaaLink_Test')
 data.setCell(1, 2, 'sumo.qa.testcases.FrontpageTest')
-data.setCell(1, 3, 7236);
+data.setCell(1, 3, 660);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'SumoLogo_Click_Test')
+data.setCell(2, 1, 'LogginnAvbrytBtn_Click_Test')
 data.setCell(2, 2, 'sumo.qa.testcases.FrontpageTest')
-data.setCell(2, 3, 6200);
+data.setCell(2, 3, 601);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'goToPakkerTest')
-data.setCell(3, 2, 'sumo.qa.testcases.NybrukerTest')
-data.setCell(3, 3, 1595);
+data.setCell(3, 1, 'GlemtPassordLink_Click_Test')
+data.setCell(3, 2, 'sumo.qa.testcases.FrontpageTest')
+data.setCell(3, 3, 402);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'GlemtPassordLink_Click_Test')
+data.setCell(4, 1, 'logginnBtn_Click_Test')
 data.setCell(4, 2, 'sumo.qa.testcases.FrontpageTest')
-data.setCell(4, 3, 377);
+data.setCell(4, 3, 194);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'NyBruker_FaatilgangNaaLink_Test')
+data.setCell(5, 1, 'SumoLogo_Click_Test')
 data.setCell(5, 2, 'sumo.qa.testcases.FrontpageTest')
-data.setCell(5, 3, 334);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'logginnBtn_Click_Test')
-data.setCell(6, 2, 'sumo.qa.testcases.FrontpageTest')
-data.setCell(6, 3, 193);
+data.setCell(5, 3, 125);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 37 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -342,93 +388,82 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">sumo.qa.testcases.NybrukerTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">sumo.qa.testcases.FrontpageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">goToPakkerTest</span>
-                <span class="method-start">10882 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=goToPakkerTest status=SUCCESS method=NybrukerTest.goToPakkerTest()[pri:0, instance:...)</span>
-                <span class="method-start">12497 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">sumo.qa.testcases.FrontpageTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">13659 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
                 <span class="method-name">LogginnFunction_Test</span>
-                <span class="method-start">22671 ms</span>
+                <span class="method-start">9415 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=LogginnFunction_Test status=SUCCESS method=FrontpageTest.LogginnFunction_Test()[pri...)</span>
-                <span class="method-start">43831 ms</span>
+                <span class="method-start">14460 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">44575 ms</span>
+                <span class="method-start">15277 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">GlemtPassordLink_Click_Test</span>
-                <span class="method-start">53247 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">SumoLogo_Click_Test</span>
+                <span class="method-start">23402 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=GlemtPassordLink_Click_Test status=SUCCESS method=FrontpageTest.GlemtPassordLink_Cl...)</span>
-                <span class="method-start">53632 ms</span>
+                <span class="method-name">tearDown([TestResult name=SumoLogo_Click_Test status=FAILURE method=FrontpageTest.SumoLogo_Click_Test()[pri:1...)</span>
+                <span class="method-start">24910 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">54336 ms</span>
+                <span class="method-start">25701 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">GlemtPassordLink_Click_Test</span>
+                <span class="method-start">33793 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=GlemtPassordLink_Click_Test status=FAILURE method=FrontpageTest.GlemtPassordLink_Cl...)</span>
+                <span class="method-start">34864 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">35682 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">NyBruker_FaatilgangNaaLink_Test</span>
-                <span class="method-start">63072 ms</span>
+                <span class="method-start">43818 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=NyBruker_FaatilgangNaaLink_Test status=SUCCESS method=FrontpageTest.NyBruker_Faatil...)</span>
-                <span class="method-start">63419 ms</span>
+                <span class="method-start">44487 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">64263 ms</span>
+                <span class="method-start">45355 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">logginnBtn_Click_Test</span>
-                <span class="method-start">72814 ms</span>
+                <span class="method-start">53316 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=logginnBtn_Click_Test status=SUCCESS method=FrontpageTest.logginnBtn_Click_Test()[p...)</span>
-                <span class="method-start">73019 ms</span>
+                <span class="method-start">53518 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">73719 ms</span>
+                <span class="method-start">54310 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">LogginnAvbrytBtn_Click_Test</span>
-                <span class="method-start">82155 ms</span>
+                <span class="method-start">62789 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=LogginnAvbrytBtn_Click_Test status=SUCCESS method=FrontpageTest.LogginnAvbrytBtn_Cl...)</span>
-                <span class="method-start">89399 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">90084 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">SumoLogo_Click_Test</span>
-                <span class="method-start">99129 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=SumoLogo_Click_Test status=SUCCESS method=FrontpageTest.SumoLogo_Click_Test()[pri:6...)</span>
-                <span class="method-start">105336 ms</span>
+                <span class="method-start">63405 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
