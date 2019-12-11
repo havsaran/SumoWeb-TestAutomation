@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Dec 10 16:41:32 CET 2019</td>
+<td>Started on:</td><td>Wed Dec 11 14:23:30 CET 2019</td>
 </tr>
-<tr><td>Total time:</td><td>64 seconds (64206 ms)</td>
+<tr><td>Total time:</td><td>51 seconds (51020 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -82,7 +82,11 @@ function toggleAllBoxes() {
 	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 	at org.testng.Assert.assertEquals(Assert.java:118)
 	at org.testng.Assert.assertEquals(Assert.java:453)
-	at sumo.qa.testcases.FrontpageTest.GlemtPassordLink_Click_Test(FrontpageTest.java:101)
+	at sumo.qa.testcases.FrontpageTest.GlemtPassordLink_Click_Test_aroundBody2(FrontpageTest.java:104)
+	at sumo.qa.testcases.FrontpageTest$AjcClosure3.run(FrontpageTest.java:1)
+	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:149)
+	at io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:51)
+	at sumo.qa.testcases.FrontpageTest.GlemtPassordLink_Click_Test(FrontpageTest.java:103)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -108,14 +112,18 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace542306453", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace542306453'><pre>java.lang.AssertionError: Glemt Passordlink is not working expected [Få passord123] but found [Få passord]
+</pre></div><a href='#' onClick='toggleBox("stack-trace1568128654", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1568128654'><pre>java.lang.AssertionError: Glemt Passordlink is not working expected [Få passord123] but found [Få passord]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 	at org.testng.Assert.assertEquals(Assert.java:118)
 	at org.testng.Assert.assertEquals(Assert.java:453)
-	at sumo.qa.testcases.FrontpageTest.GlemtPassordLink_Click_Test(FrontpageTest.java:101)
+	at sumo.qa.testcases.FrontpageTest.GlemtPassordLink_Click_Test_aroundBody2(FrontpageTest.java:104)
+	at sumo.qa.testcases.FrontpageTest$AjcClosure3.run(FrontpageTest.java:1)
+	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:149)
+	at io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:51)
+	at sumo.qa.testcases.FrontpageTest.GlemtPassordLink_Click_Test(FrontpageTest.java:103)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -143,77 +151,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>sumo.qa.testcases.FrontpageTest@2e73d5eb</td></tr>
-<tr>
-<td title='sumo.qa.testcases.FrontpageTest.SumoLogo_Click_Test()'><b>SumoLogo_Click_Test</b><br>Test class: sumo.qa.testcases.FrontpageTest</td>
-<td><div><pre>java.lang.AssertionError: It&apos;s redirected different page expected [TV 2 Sumo] but found [Velkommen | TV 2 Sumo]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at sumo.qa.testcases.FrontpageTest.SumoLogo_Click_Test(FrontpageTest.java:166)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1940248684", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1940248684'><pre>java.lang.AssertionError: It&apos;s redirected different page expected [TV 2 Sumo] but found [Velkommen | TV 2 Sumo]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at sumo.qa.testcases.FrontpageTest.SumoLogo_Click_Test(FrontpageTest.java:166)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>sumo.qa.testcases.FrontpageTest@2e73d5eb</td></tr>
+<td>sumo.qa.testcases.FrontpageTest@67774e29</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -226,22 +164,27 @@ function toggleAllBoxes() {
 <td title='sumo.qa.testcases.FrontpageTest.LogginnAvbrytBtn_Click_Test()'><b>LogginnAvbrytBtn_Click_Test</b><br>Test class: sumo.qa.testcases.FrontpageTest</td>
 <td></td>
 <td>0</td>
-<td>sumo.qa.testcases.FrontpageTest@2e73d5eb</td></tr>
+<td>sumo.qa.testcases.FrontpageTest@67774e29</td></tr>
 <tr>
 <td title='sumo.qa.testcases.FrontpageTest.LogginnFunction_Test()'><b>LogginnFunction_Test</b><br>Test class: sumo.qa.testcases.FrontpageTest</td>
 <td></td>
 <td>5</td>
-<td>sumo.qa.testcases.FrontpageTest@2e73d5eb</td></tr>
+<td>sumo.qa.testcases.FrontpageTest@67774e29</td></tr>
 <tr>
 <td title='sumo.qa.testcases.FrontpageTest.NyBruker_FaatilgangNaaLink_Test()'><b>NyBruker_FaatilgangNaaLink_Test</b><br>Test class: sumo.qa.testcases.FrontpageTest<br>Test method: NyBruker</td>
 <td></td>
 <td>0</td>
-<td>sumo.qa.testcases.FrontpageTest@2e73d5eb</td></tr>
+<td>sumo.qa.testcases.FrontpageTest@67774e29</td></tr>
+<tr>
+<td title='sumo.qa.testcases.FrontpageTest.SumoLogo_Click_Test()'><b>SumoLogo_Click_Test</b><br>Test class: sumo.qa.testcases.FrontpageTest</td>
+<td></td>
+<td>0</td>
+<td>sumo.qa.testcases.FrontpageTest@67774e29</td></tr>
 <tr>
 <td title='sumo.qa.testcases.FrontpageTest.logginnBtn_Click_Test()'><b>logginnBtn_Click_Test</b><br>Test class: sumo.qa.testcases.FrontpageTest</td>
 <td></td>
 <td>0</td>
-<td>sumo.qa.testcases.FrontpageTest@2e73d5eb</td></tr>
+<td>sumo.qa.testcases.FrontpageTest@67774e29</td></tr>
 </table><p>
 </body>
 </html>

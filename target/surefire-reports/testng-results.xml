@@ -1,36 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="5" failed="2" skipped="0">
+<testng-results skipped="0" failed="1" ignored="1" total="7" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-12-10T15:21:45Z" name="TV 2 Sumo Automation Test Suite" finished-at="2019-12-10T15:23:17Z" duration-ms="91666">
+  <suite name="TV 2 Sumo Automation Test Suite" duration-ms="68827" started-at="2019-12-11T09:43:06Z" finished-at="2019-12-11T09:44:14Z">
     <groups>
     </groups>
-    <test started-at="2019-12-10T15:21:45Z" name="TV 2 sumo Test Cases" finished-at="2019-12-10T15:23:17Z" duration-ms="91666">
+    <test name="TV 2 sumo Test Cases" duration-ms="68827" started-at="2019-12-11T09:43:06Z" finished-at="2019-12-11T09:44:14Z">
       <class name="sumo.qa.testcases.FrontpageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:sumo.qa.testcases.FrontpageTest@788ddc1f]" started-at="2019-12-10T15:21:59Z" name="setUp" finished-at="2019-12-10T15:22:18Z" duration-ms="19450" status="PASS">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:sumo.qa.testcases.FrontpageTest@8ed9cf]" name="setUp" is-config="true" duration-ms="9019" started-at="2019-12-11T09:43:20Z" finished-at="2019-12-11T09:43:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="LogginnFunction_Test()[pri:1, instance:sumo.qa.testcases.FrontpageTest@788ddc1f]" started-at="2019-12-10T15:22:18Z" name="LogginnFunction_Test" finished-at="2019-12-10T15:22:24Z" duration-ms="5141" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LogginnFunction_Test -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.FrontpageTest@788ddc1f]" started-at="2019-12-10T15:22:24Z" name="tearDown" finished-at="2019-12-10T15:22:24Z" duration-ms="751" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=LogginnFunction_Test status=SUCCESS method=FrontpageTest.LogginnFunction_Test()[pri:1, instance:sumo.qa.testcases.FrontpageTest@788ddc1f] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:sumo.qa.testcases.FrontpageTest@788ddc1f]" started-at="2019-12-10T15:22:24Z" name="setUp" finished-at="2019-12-10T15:22:33Z" duration-ms="8669" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="GlemtPassordLink_Click_Test()[pri:2, instance:sumo.qa.testcases.FrontpageTest@788ddc1f]" started-at="2019-12-10T15:22:33Z" name="GlemtPassordLink_Click_Test" description="Glemte pass" finished-at="2019-12-10T15:22:34Z" duration-ms="667" status="FAIL">
+        <test-method status="FAIL" signature="GlemtPassordLink_Click_Test()[pri:2, instance:sumo.qa.testcases.FrontpageTest@8ed9cf]" name="GlemtPassordLink_Click_Test" duration-ms="1040" started-at="2019-12-11T09:43:29Z" description="Glemte pass" finished-at="2019-12-11T09:43:30Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Glemt Passordlink is not working expected [Få passord123] but found [Få passord]]]>
@@ -42,162 +23,111 @@ at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
-at sumo.qa.testcases.FrontpageTest.GlemtPassordLink_Click_Test(FrontpageTest.java:100)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at sumo.qa.testcases.FrontpageTest.GlemtPassordLink_Click_Test_aroundBody2(FrontpageTest.java:104)
+at sumo.qa.testcases.FrontpageTest$AjcClosure3.run(FrontpageTest.java:1)
+at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:149)
+at io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:51)
+at sumo.qa.testcases.FrontpageTest.GlemtPassordLink_Click_Test(FrontpageTest.java:103)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
 at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
 at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
 at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.base/java.lang.Thread.run(Thread.java:834)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:748)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GlemtPassordLink_Click_Test -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.FrontpageTest@788ddc1f]" started-at="2019-12-10T15:22:34Z" name="tearDown" finished-at="2019-12-10T15:22:35Z" duration-ms="888" status="PASS">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.FrontpageTest@8ed9cf]" name="tearDown" is-config="true" duration-ms="754" started-at="2019-12-11T09:43:31Z" finished-at="2019-12-11T09:43:31Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=GlemtPassordLink_Click_Test status=FAILURE method=FrontpageTest.GlemtPassordLink_Click_Test()[pri:2, instance:sumo.qa.testcases.FrontpageTest@788ddc1f] output={null}]]]>
+                <![CDATA[[TestResult name=GlemtPassordLink_Click_Test status=FAILURE method=FrontpageTest.GlemtPassordLink_Click_Test()[pri:2, instance:sumo.qa.testcases.FrontpageTest@8ed9cf] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:sumo.qa.testcases.FrontpageTest@788ddc1f]" started-at="2019-12-10T15:22:35Z" name="setUp" finished-at="2019-12-10T15:22:43Z" duration-ms="8281" status="PASS">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:sumo.qa.testcases.FrontpageTest@8ed9cf]" name="setUp" is-config="true" duration-ms="9200" started-at="2019-12-11T09:43:31Z" finished-at="2019-12-11T09:43:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="NyBruker_FaatilgangNaaLink_Test()[pri:3, instance:sumo.qa.testcases.FrontpageTest@788ddc1f]" started-at="2019-12-10T15:22:43Z" name="NyBruker_FaatilgangNaaLink_Test" description="NyBruker" finished-at="2019-12-10T15:22:44Z" duration-ms="657" status="PASS">
+        <test-method status="PASS" signature="NyBruker_FaatilgangNaaLink_Test()[pri:3, instance:sumo.qa.testcases.FrontpageTest@8ed9cf]" name="NyBruker_FaatilgangNaaLink_Test" duration-ms="1049" started-at="2019-12-11T09:43:41Z" description="NyBruker" finished-at="2019-12-11T09:43:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NyBruker_FaatilgangNaaLink_Test -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.FrontpageTest@788ddc1f]" started-at="2019-12-10T15:22:44Z" name="tearDown" finished-at="2019-12-10T15:22:45Z" duration-ms="830" status="PASS">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.FrontpageTest@8ed9cf]" name="tearDown" is-config="true" duration-ms="748" started-at="2019-12-11T09:43:42Z" finished-at="2019-12-11T09:43:42Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=NyBruker_FaatilgangNaaLink_Test status=SUCCESS method=FrontpageTest.NyBruker_FaatilgangNaaLink_Test()[pri:3, instance:sumo.qa.testcases.FrontpageTest@788ddc1f] output={null}]]]>
+                <![CDATA[[TestResult name=NyBruker_FaatilgangNaaLink_Test status=SUCCESS method=FrontpageTest.NyBruker_FaatilgangNaaLink_Test()[pri:3, instance:sumo.qa.testcases.FrontpageTest@8ed9cf] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:sumo.qa.testcases.FrontpageTest@788ddc1f]" started-at="2019-12-10T15:22:45Z" name="setUp" finished-at="2019-12-10T15:22:53Z" duration-ms="8175" status="PASS">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:sumo.qa.testcases.FrontpageTest@8ed9cf]" name="setUp" is-config="true" duration-ms="8903" started-at="2019-12-11T09:43:42Z" finished-at="2019-12-11T09:43:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="logginnBtn_Click_Test()[pri:4, instance:sumo.qa.testcases.FrontpageTest@788ddc1f]" started-at="2019-12-10T15:22:53Z" name="logginnBtn_Click_Test" finished-at="2019-12-10T15:22:53Z" duration-ms="183" status="PASS">
+        <test-method status="PASS" signature="logginnBtn_Click_Test()[pri:4, instance:sumo.qa.testcases.FrontpageTest@8ed9cf]" name="logginnBtn_Click_Test" duration-ms="276" started-at="2019-12-11T09:43:51Z" finished-at="2019-12-11T09:43:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logginnBtn_Click_Test -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.FrontpageTest@788ddc1f]" started-at="2019-12-10T15:22:53Z" name="tearDown" finished-at="2019-12-10T15:22:54Z" duration-ms="798" status="PASS">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.FrontpageTest@8ed9cf]" name="tearDown" is-config="true" duration-ms="704" started-at="2019-12-11T09:43:52Z" finished-at="2019-12-11T09:43:52Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=logginnBtn_Click_Test status=SUCCESS method=FrontpageTest.logginnBtn_Click_Test()[pri:4, instance:sumo.qa.testcases.FrontpageTest@788ddc1f] output={null}]]]>
+                <![CDATA[[TestResult name=logginnBtn_Click_Test status=SUCCESS method=FrontpageTest.logginnBtn_Click_Test()[pri:4, instance:sumo.qa.testcases.FrontpageTest@8ed9cf] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:sumo.qa.testcases.FrontpageTest@788ddc1f]" started-at="2019-12-10T15:22:54Z" name="setUp" finished-at="2019-12-10T15:23:02Z" duration-ms="8162" status="PASS">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:sumo.qa.testcases.FrontpageTest@8ed9cf]" name="setUp" is-config="true" duration-ms="9220" started-at="2019-12-11T09:43:52Z" finished-at="2019-12-11T09:44:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="LogginnAvbrytBtn_Click_Test()[pri:5, instance:sumo.qa.testcases.FrontpageTest@788ddc1f]" started-at="2019-12-10T15:23:02Z" name="LogginnAvbrytBtn_Click_Test" finished-at="2019-12-10T15:23:03Z" duration-ms="337" status="PASS">
+        <test-method status="PASS" signature="LogginnAvbrytBtn_Click_Test()[pri:5, instance:sumo.qa.testcases.FrontpageTest@8ed9cf]" name="LogginnAvbrytBtn_Click_Test" duration-ms="891" started-at="2019-12-11T09:44:02Z" finished-at="2019-12-11T09:44:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogginnAvbrytBtn_Click_Test -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.FrontpageTest@788ddc1f]" started-at="2019-12-10T15:23:03Z" name="tearDown" finished-at="2019-12-10T15:23:03Z" duration-ms="803" status="PASS">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.FrontpageTest@8ed9cf]" name="tearDown" is-config="true" duration-ms="738" started-at="2019-12-11T09:44:02Z" finished-at="2019-12-11T09:44:03Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=LogginnAvbrytBtn_Click_Test status=SUCCESS method=FrontpageTest.LogginnAvbrytBtn_Click_Test()[pri:5, instance:sumo.qa.testcases.FrontpageTest@788ddc1f] output={null}]]]>
+                <![CDATA[[TestResult name=LogginnAvbrytBtn_Click_Test status=SUCCESS method=FrontpageTest.LogginnAvbrytBtn_Click_Test()[pri:5, instance:sumo.qa.testcases.FrontpageTest@8ed9cf] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:sumo.qa.testcases.FrontpageTest@788ddc1f]" started-at="2019-12-10T15:23:03Z" name="setUp" finished-at="2019-12-10T15:23:14Z" duration-ms="11129" status="PASS">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:sumo.qa.testcases.FrontpageTest@8ed9cf]" name="setUp" is-config="true" duration-ms="9072" started-at="2019-12-11T09:44:03Z" finished-at="2019-12-11T09:44:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="SumoLogo_Click_Test()[pri:6, instance:sumo.qa.testcases.FrontpageTest@788ddc1f]" started-at="2019-12-10T15:23:14Z" name="SumoLogo_Click_Test" finished-at="2019-12-10T15:23:15Z" duration-ms="414" status="FAIL">
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
-            <message>
-              <![CDATA[stale element reference: element is not attached to the page document
-  (Session info: chrome=78.0.3904.108)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'PC7425', ip: '10.53.22.174', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.3'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\speriy\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:54795}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 1e9280e6af8b86ea9b8f9962065cd264]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
-  (Session info: chrome=78.0.3904.108)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'PC7425', ip: '10.53.22.174', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.3'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\speriy\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:54795}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 1e9280e6af8b86ea9b8f9962065cd264
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:326)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at com.sun.proxy.$Proxy17.isDisplayed(Unknown Source)
-at sumo.qa.testcases.FrontpageTest.SumoLogo_Click_Test(FrontpageTest.java:163)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.base/java.lang.Thread.run(Thread.java:834)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+        <test-method status="PASS" signature="SumoLogo_Click_Test()[pri:6, instance:sumo.qa.testcases.FrontpageTest@8ed9cf]" name="SumoLogo_Click_Test" duration-ms="1426" started-at="2019-12-11T09:44:12Z" finished-at="2019-12-11T09:44:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SumoLogo_Click_Test -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.FrontpageTest@788ddc1f]" started-at="2019-12-10T15:23:16Z" name="tearDown" finished-at="2019-12-10T15:23:17Z" duration-ms="753" status="PASS">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.FrontpageTest@8ed9cf]" name="tearDown" is-config="true" duration-ms="730" started-at="2019-12-11T09:44:14Z" finished-at="2019-12-11T09:44:14Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SumoLogo_Click_Test status=FAILURE method=FrontpageTest.SumoLogo_Click_Test()[pri:6, instance:sumo.qa.testcases.FrontpageTest@788ddc1f] output={null}]]]>
+                <![CDATA[[TestResult name=SumoLogo_Click_Test status=SUCCESS method=FrontpageTest.SumoLogo_Click_Test()[pri:6, instance:sumo.qa.testcases.FrontpageTest@8ed9cf] output={null}]]]>
               </value>
             </param>
           </params>
@@ -206,19 +136,19 @@ at java.base/java.lang.Thread.run(Thread.java:834)
         </test-method> <!-- tearDown -->
       </class> <!-- sumo.qa.testcases.FrontpageTest -->
       <class name="sumo.qa.testcases.NybrukerTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:sumo.qa.testcases.NybrukerTest@2dc3271b]" started-at="2019-12-10T15:21:45Z" name="setUp" finished-at="2019-12-10T15:21:56Z" duration-ms="11038" status="PASS">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:sumo.qa.testcases.NybrukerTest@f72203]" name="setUp" is-config="true" duration-ms="11632" started-at="2019-12-11T09:43:06Z" finished-at="2019-12-11T09:43:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="goToPakkerTest()[pri:0, instance:sumo.qa.testcases.NybrukerTest@2dc3271b]" started-at="2019-12-10T15:21:57Z" name="goToPakkerTest" description="PAkker" finished-at="2019-12-10T15:21:58Z" duration-ms="1539" status="PASS">
+        <test-method status="PASS" signature="goToPakkerTest()[pri:0, instance:sumo.qa.testcases.NybrukerTest@f72203]" name="goToPakkerTest" duration-ms="1518" started-at="2019-12-11T09:43:17Z" description="PAkker" finished-at="2019-12-11T09:43:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToPakkerTest -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.NybrukerTest@2dc3271b]" started-at="2019-12-10T15:21:58Z" name="tearDown" finished-at="2019-12-10T15:21:59Z" duration-ms="762" status="PASS">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.NybrukerTest@f72203]" name="tearDown" is-config="true" duration-ms="813" started-at="2019-12-11T09:43:19Z" finished-at="2019-12-11T09:43:20Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=goToPakkerTest status=SUCCESS method=NybrukerTest.goToPakkerTest()[pri:0, instance:sumo.qa.testcases.NybrukerTest@2dc3271b] output={null}]]]>
+                <![CDATA[[TestResult name=goToPakkerTest status=SUCCESS method=NybrukerTest.goToPakkerTest()[pri:0, instance:sumo.qa.testcases.NybrukerTest@f72203] output={null}]]]>
               </value>
             </param>
           </params>

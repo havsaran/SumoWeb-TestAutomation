@@ -8,7 +8,6 @@
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="GlemtPassordLink_Click_Test"/>
-          <include name="SumoLogo_Click_Test"/>
         </methods>
       </class> <!-- sumo.qa.testcases.FrontpageTest -->
     </classes>

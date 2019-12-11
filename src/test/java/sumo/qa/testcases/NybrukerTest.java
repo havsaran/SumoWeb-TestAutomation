@@ -20,6 +20,7 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 import sumo.qa.base.TestBase;
 
@@ -57,6 +58,7 @@ public class NybrukerTest extends TestBase {
 	@Description ("This method is checking if the package displaying link works fine")
 	@Feature ("pacakge display- checking")
 	@Story ("positive testcase")
+	@Step("Test body.....")
 
 	void goToPakkerTest() throws InterruptedException {
 //		extentTest = extent.startTest("goToPakkerTest_Testcase");

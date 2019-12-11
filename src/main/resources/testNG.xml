@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite parallel = "true" name="TV 2 Sumo Automation Test Suite">
+<suite parallel = "methods" thread-count="5" name="TV 2 Sumo Automation Test Suite" verbose="1">
 
 	<test thread-count="2" name="TV 2 sumo Test Cases">
 		<classes>

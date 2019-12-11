@@ -1,0 +1,1 @@
+{"uuid":"0220d76b-8f00-4cfb-80af-1e2594b662a2","name":"sumo.qa.testcases.FrontpageTest.tearDown","description":"","start":1576050155067,"stop":1576050155825,"children":["20353a4f-fde4-42d7-9328-9c71ec81437a"],"afters":[{"name":"tearDown","status":"passed","stage":"finished","description":"","start":1576050155067,"stop":1576050155825}]}

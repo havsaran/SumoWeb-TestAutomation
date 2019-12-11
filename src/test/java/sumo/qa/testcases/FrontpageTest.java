@@ -25,77 +25,69 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 import sumo.qa.base.TestBase;
 import sumo.qa.pages.Frontpage;
 import sumo.qa.util.TestUtil;
 import sumo.qa.ExtentReportListener.*;
 
-@Listeners ({TestAllureListener.class})
+@Listeners({ TestAllureListener.class })
 public class FrontpageTest extends TestBase {
-	
-	//WebDriver driver;
+
 	Frontpage frontpage;
-
-//	public ExtentReports extent;
-//	public ExtentTest extentTest;
-
-//	@BeforeTest
-//	public void setExtent() {
-//		extent = new ExtentReports(System.getProperty("user.dir") + "/test-output/ExtentReport.html", true);
-//	}
 
 	@BeforeMethod
 	public void setUp() throws InterruptedException {
-				driver = initialization();
+		driver = initialization();
 		driver.get(url);
 		frontpage = new Frontpage();
 	}
 
-	@Severity(SeverityLevel.BLOCKER)	
-	@Description ("This method is checking if the loggin function works fine")
-	@Feature ("Loggin- checking")
-	@Story ("positive testcase")
-	
+	@Severity(SeverityLevel.BLOCKER)
+	@Description("This method is checking if the loggin function works fine")
+	@Feature("Loggin- checking")
+	@Story("positive testcase")
+	@Step("Test body.....")
 	@Test(priority = 1)
 
 	public void LogginnFunction_Test() throws InterruptedException {
-		//extentTest = extent.startTest("LogginnFunction_Testcase");
 
 		frontpage.logginnFunction();
-		
+
 		boolean flag = false;
-		
-		try {
-			//frontpage.LogginnBtn.click();
-			click(getDriver(), frontpage.LogginnBtn,3);
-			Assert.assertEquals(flag, true, "Wrong username/password");
-			}
-		catch (Exception excep) {
 
 		try {
-			frontpage.GlemtPassord.click();
-			//click(getDriver(), frontpage.GlemtPassord,TestUtil.ExplicitWait);
-			
-			Assert.assertEquals(flag, true, "LogginnFunction_Testcase is not clickable, caught in try block");
-		} catch (Exception excep1) {
-			flag = true;
-			Assert.assertEquals(flag, true, "LogginnFunction_Testcase is not clickable, caught in catch block");
-			// System.out.println(excep.getMessage());
+			//static timeout used here on purpose
+			click(getDriver(), frontpage.LogginnBtn, 3);
+			Assert.assertEquals(flag, true, "Wrong username/password");
+		} catch (Exception excep) {
+
+			try {
+				frontpage.GlemtPassord.click();
+				// click(getDriver(), frontpage.GlemtPassord,TestUtil.ExplicitWait);
+
+				Assert.assertEquals(flag, true, "LogginnFunction_Testcase is not clickable, caught in try block");
+			} catch (Exception excep1) {
+				flag = true;
+				Assert.assertEquals(flag, true, "LogginnFunction_Testcase is not clickable, caught in catch block");
+				// System.out.println(excep.getMessage());
+			}
 		}
 	}
-	}
 
-	@Test(priority = 2,description="Glemte pass")
-	@Severity(SeverityLevel.BLOCKER)	
-	@Description ("This method is checking if the foget password links works fine")
-	@Feature ("forget pass link- checking")
-	@Story ("positive testcase")
+	@Test(priority = 2, description = "Glemte pass")
+	@Severity(SeverityLevel.BLOCKER)
+	@Description("This method is checking if the foget password links works fine")
+	@Feature("forget pass link- checking")
+	@Story("positive testcase")
+	@Step("Test body.....")
 	public void GlemtPassordLink_Click_Test() {
-		//extentTest = extent.startTest("GlemtPassordLink_Click_Testcase");
+		// extentTest = extent.startTest("GlemtPassordLink_Click_Testcase");
 
 		frontpage.clickOnGlemtPassordLink();
 		Assert.assertEquals(frontpage.GlemtPassordVerifyText.getText(), "Få passord123",
@@ -103,11 +95,12 @@ public class FrontpageTest extends TestBase {
 
 	}
 
-	@Test(priority = 3,description="NyBruker")
-	@Severity(SeverityLevel.BLOCKER)	
-	@Description ("This method is checking if the new user link works fine")
-	@Feature ("Loggin- checking")
-	@Story ("negative testcase")
+	@Test(priority = 3, description = "NyBruker")
+	@Severity(SeverityLevel.BLOCKER)
+	@Description("This method is checking if the new user link works fine")
+	@Feature("Loggin- checking")
+	@Story("negative testcase")
+	@Step("Test body.....")
 	public void NyBruker_FaatilgangNaaLink_Test() {
 
 //		extentTest = extent.startTest("NyBruker_FåtilgangNåLink_Testcase");
@@ -120,17 +113,19 @@ public class FrontpageTest extends TestBase {
 	}
 
 	@Test(priority = 4)
+	@Step("Test body.....")
 	public void logginnBtn_Click_Test() {
 
-		//extentTest = extent.startTest("logginnBtn_Click_Testcase");
+		// extentTest = extent.startTest("logginnBtn_Click_Testcase");
 		frontpage.clickOn_LoggInnBtn();
 		Assert.assertEquals(frontpage.LogginnVerifyText.getText(), "Logg inn", "Logginn Button is not working ");
 		// System.out.println(frontpage.LogginnVerifyText.getText());
 	}
 
 	@Test(priority = 5)
+	@Step("Test body.....")
 	public void LogginnAvbrytBtn_Click_Test() {
-		//extentTest = extent.startTest("LogginnAvbrytBtn_Click_Testcase");
+		// extentTest = extent.startTest("LogginnAvbrytBtn_Click_Testcase");
 		// frontpage.clickOn_LogginnAvbrytBtn();
 
 		boolean flag = false;
@@ -147,12 +142,13 @@ public class FrontpageTest extends TestBase {
 
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 6)
+	@Step("Test body.....")
 	public void SumoLogo_Click_Test() {
-		//extentTest = extent.startTest("SumoLogo_Click_Testcase");
+		// extentTest = extent.startTest("SumoLogo_Click_Testcase");
 
 		// System.out.println(driver.getTitle());
-		
+
 //		try {
 //			Thread.sleep(2000);
 //		} catch (InterruptedException e) {
@@ -162,8 +158,8 @@ public class FrontpageTest extends TestBase {
 		frontpage.clickOn_SumoLogo();
 
 		boolean flag = display(getDriver(), frontpage.FåTilgang, TestUtil.ExplicitWait);
-		
-		Assert.assertEquals(flag,true, "It's redirected different page");
+
+		Assert.assertEquals(flag, true, "It's redirected different page");
 
 	}
 
@@ -208,6 +204,5 @@ public class FrontpageTest extends TestBase {
 //		return destination;
 //
 //	}
-
 
 }

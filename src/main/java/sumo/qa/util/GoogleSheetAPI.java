@@ -84,6 +84,11 @@ public class GoogleSheetAPI {
 		return credential;
 	}
 
+	private static void getAbsolutePath() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	/**
 	 * Build and return an authorized Sheets API client service.
 	 * 
@@ -107,7 +112,7 @@ public class GoogleSheetAPI {
 			return null;
 		}
 	}
-
+// Customized method for reading value.
 	public String getSpreadSheetRecordsCellData(int Rownumber, int columnnumber) {
 
 		GoogleSheetAPI sheetAPI = new GoogleSheetAPI();
@@ -115,11 +120,8 @@ public class GoogleSheetAPI {
 		try {
 			sheetvalue = sheetAPI.getSpreadSheetRecords(spreadsheetId, range);
 
-//			//System.out.println(sheetvalue.size());
-//			for (int i = 0; i < sheetvalue.size(); i++) {
-//				// System.out.println(sheetvalue.get(i));
-//			}
 			cellvalue = (String) (sheetvalue.get(Rownumber).get(columnnumber));
+		
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -127,11 +129,5 @@ public class GoogleSheetAPI {
 		return cellvalue;
 	}
 
-//	public String ss;
 
-//	@Test
-//	public void summaa() {
-//		ss = getSpreadSheetRecordsCellData(1, 5);
-//		System.out.println(ss);
-//	}
 }
