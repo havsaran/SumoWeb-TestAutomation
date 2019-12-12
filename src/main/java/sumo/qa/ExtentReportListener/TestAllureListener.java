@@ -76,4 +76,5 @@ public class TestAllureListener implements ITestListener  {
 		System.out.println("Test failed but it is in defined success ratio " + getTestMethodName(iTestResult));
 	}
 
+
 }

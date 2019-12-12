@@ -57,14 +57,24 @@ public class Frontpage extends TestBase {
 	@FindBy(xpath = "//a[@class='logo']//*[@class='svglogo svglogo-sumo-white']") // div[@class='header__inner']//*[@class='svglogo
 																					// svglogo-sumo-white']
 	private WebElement SumoLogo;
+	
+	@FindBy (xpath = "//span[contains(text(),'Meny')]")	
+	private WebElement Meny;
+	
+	@FindBy (xpath = "//span[contains(text(),'Serier')]")	
+	private WebElement Serier;
 
-	// Actions /functions
+	
 
+	// Initializing Page Factory
+	
 	public Frontpage() {
 
 		PageFactory.initElements(getDriver(), this);
 
 	}
+	
+	// Actions /functions
 
 	public void clickOn_LoggInnBtn() {
 
@@ -112,6 +122,9 @@ public class Frontpage extends TestBase {
 	}
 
 	public void clickOn_SumoLogo() {
+		
+		click(getDriver(), Meny, TestUtil.ExplicitWait);
+		click(getDriver(), Serier, TestUtil.ExplicitWait);
 		
 		click(getDriver(), SumoLogo, TestUtil.ExplicitWait);
 

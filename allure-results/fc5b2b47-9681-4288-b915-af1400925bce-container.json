@@ -1,1 +1,0 @@
-{"uuid":"fc5b2b47-9681-4288-b915-af1400925bce","name":"sumo.qa.testcases.NybrukerTest.tearDown","description":"","start":1576050432227,"stop":1576050433559,"children":["e225575b-bd68-4b51-ae91-bc667b57d878"],"afters":[{"name":"tearDown","status":"passed","stage":"finished","description":"","start":1576050432227,"stop":1576050433559}]}

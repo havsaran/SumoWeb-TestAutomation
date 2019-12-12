@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="6" passed="5" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-12-11T13:23:30Z" name="Default suite" finished-at="2019-12-11T13:24:21Z" duration-ms="51020">
+  <suite started-at="2019-12-12T12:04:09Z" name="Default suite" finished-at="2019-12-12T12:05:10Z" duration-ms="60344">
     <groups>
     </groups>
-    <test started-at="2019-12-11T13:23:30Z" name="Default test" finished-at="2019-12-11T13:24:21Z" duration-ms="51020">
+    <test started-at="2019-12-12T12:04:09Z" name="Default test" finished-at="2019-12-12T12:05:10Z" duration-ms="60344">
       <class name="sumo.qa.testcases.FrontpageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:sumo.qa.testcases.FrontpageTest@67774e29]" started-at="2019-12-11T13:23:30Z" name="setUp" finished-at="2019-12-11T13:23:37Z" duration-ms="7347" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:sumo.qa.testcases.FrontpageTest@1e95b653]" started-at="2019-12-12T12:04:09Z" name="setUp" finished-at="2019-12-12T12:04:18Z" duration-ms="8478" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="LogginnFunction_Test()[pri:1, instance:sumo.qa.testcases.FrontpageTest@67774e29]" started-at="2019-12-11T13:23:38Z" name="LogginnFunction_Test" finished-at="2019-12-11T13:23:43Z" duration-ms="5350" status="PASS">
+        <test-method signature="LogginnFunction_Test()[pri:1, instance:sumo.qa.testcases.FrontpageTest@1e95b653]" started-at="2019-12-12T12:04:18Z" name="LogginnFunction_Test" finished-at="2019-12-12T12:04:24Z" duration-ms="5535" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogginnFunction_Test -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.FrontpageTest@67774e29]" started-at="2019-12-11T13:23:43Z" name="tearDown" finished-at="2019-12-11T13:23:44Z" duration-ms="745" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.FrontpageTest@1e95b653]" started-at="2019-12-12T12:04:24Z" name="tearDown" finished-at="2019-12-12T12:04:24Z" duration-ms="866" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=LogginnFunction_Test status=SUCCESS method=FrontpageTest.LogginnFunction_Test()[pri:1, instance:sumo.qa.testcases.FrontpageTest@67774e29] output={null}]]]>
+                <![CDATA[[TestResult name=LogginnFunction_Test status=SUCCESS method=FrontpageTest.LogginnFunction_Test()[pri:1, instance:sumo.qa.testcases.FrontpageTest@1e95b653] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:sumo.qa.testcases.FrontpageTest@67774e29]" started-at="2019-12-11T13:23:44Z" name="setUp" finished-at="2019-12-11T13:23:49Z" duration-ms="5833" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:sumo.qa.testcases.FrontpageTest@1e95b653]" started-at="2019-12-12T12:04:24Z" name="setUp" finished-at="2019-12-12T12:04:31Z" duration-ms="6407" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="GlemtPassordLink_Click_Test()[pri:2, instance:sumo.qa.testcases.FrontpageTest@67774e29]" started-at="2019-12-11T13:23:49Z" name="GlemtPassordLink_Click_Test" description="Glemte pass" finished-at="2019-12-11T13:23:50Z" duration-ms="657" status="FAIL">
+        <test-method signature="GlemtPassordLink_Click_Test()[pri:2, instance:sumo.qa.testcases.FrontpageTest@1e95b653]" started-at="2019-12-12T12:04:31Z" name="GlemtPassordLink_Click_Test" description="Glemte pass" finished-at="2019-12-12T12:04:32Z" duration-ms="905" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Glemt Passordlink is not working expected [Få passord123] but found [Få passord]]]>
@@ -42,11 +42,11 @@ at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
-at sumo.qa.testcases.FrontpageTest.GlemtPassordLink_Click_Test_aroundBody2(FrontpageTest.java:104)
+at sumo.qa.testcases.FrontpageTest.GlemtPassordLink_Click_Test_aroundBody2(FrontpageTest.java:82)
 at sumo.qa.testcases.FrontpageTest$AjcClosure3.run(FrontpageTest.java:1)
 at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:149)
 at io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:51)
-at sumo.qa.testcases.FrontpageTest.GlemtPassordLink_Click_Test(FrontpageTest.java:103)
+at sumo.qa.testcases.FrontpageTest.GlemtPassordLink_Click_Test(FrontpageTest.java:81)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -78,87 +78,87 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GlemtPassordLink_Click_Test -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.FrontpageTest@67774e29]" started-at="2019-12-11T13:23:51Z" name="tearDown" finished-at="2019-12-11T13:23:52Z" duration-ms="951" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.FrontpageTest@1e95b653]" started-at="2019-12-12T12:04:32Z" name="tearDown" finished-at="2019-12-12T12:04:33Z" duration-ms="851" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=GlemtPassordLink_Click_Test status=FAILURE method=FrontpageTest.GlemtPassordLink_Click_Test()[pri:2, instance:sumo.qa.testcases.FrontpageTest@67774e29] output={null}]]]>
+                <![CDATA[[TestResult name=GlemtPassordLink_Click_Test status=FAILURE method=FrontpageTest.GlemtPassordLink_Click_Test()[pri:2, instance:sumo.qa.testcases.FrontpageTest@1e95b653] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:sumo.qa.testcases.FrontpageTest@67774e29]" started-at="2019-12-11T13:23:52Z" name="setUp" finished-at="2019-12-11T13:23:57Z" duration-ms="5669" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:sumo.qa.testcases.FrontpageTest@1e95b653]" started-at="2019-12-12T12:04:33Z" name="setUp" finished-at="2019-12-12T12:04:43Z" duration-ms="9700" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="NyBruker_FaatilgangNaaLink_Test()[pri:3, instance:sumo.qa.testcases.FrontpageTest@67774e29]" started-at="2019-12-11T13:23:57Z" name="NyBruker_FaatilgangNaaLink_Test" description="NyBruker" finished-at="2019-12-11T13:23:58Z" duration-ms="609" status="PASS">
+        <test-method signature="NyBruker_FaatilgangNaaLink_Test()[pri:3, instance:sumo.qa.testcases.FrontpageTest@1e95b653]" started-at="2019-12-12T12:04:43Z" name="NyBruker_FaatilgangNaaLink_Test" description="NyBruker" finished-at="2019-12-12T12:04:44Z" duration-ms="935" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NyBruker_FaatilgangNaaLink_Test -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.FrontpageTest@67774e29]" started-at="2019-12-11T13:23:58Z" name="tearDown" finished-at="2019-12-11T13:23:59Z" duration-ms="730" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.FrontpageTest@1e95b653]" started-at="2019-12-12T12:04:44Z" name="tearDown" finished-at="2019-12-12T12:04:45Z" duration-ms="829" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=NyBruker_FaatilgangNaaLink_Test status=SUCCESS method=FrontpageTest.NyBruker_FaatilgangNaaLink_Test()[pri:3, instance:sumo.qa.testcases.FrontpageTest@67774e29] output={null}]]]>
+                <![CDATA[[TestResult name=NyBruker_FaatilgangNaaLink_Test status=SUCCESS method=FrontpageTest.NyBruker_FaatilgangNaaLink_Test()[pri:3, instance:sumo.qa.testcases.FrontpageTest@1e95b653] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:sumo.qa.testcases.FrontpageTest@67774e29]" started-at="2019-12-11T13:23:59Z" name="setUp" finished-at="2019-12-11T13:24:05Z" duration-ms="5984" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:sumo.qa.testcases.FrontpageTest@1e95b653]" started-at="2019-12-12T12:04:45Z" name="setUp" finished-at="2019-12-12T12:04:51Z" duration-ms="6575" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="logginnBtn_Click_Test()[pri:4, instance:sumo.qa.testcases.FrontpageTest@67774e29]" started-at="2019-12-11T13:24:05Z" name="logginnBtn_Click_Test" finished-at="2019-12-11T13:24:05Z" duration-ms="227" status="PASS">
+        <test-method signature="logginnBtn_Click_Test()[pri:4, instance:sumo.qa.testcases.FrontpageTest@1e95b653]" started-at="2019-12-12T12:04:51Z" name="logginnBtn_Click_Test" finished-at="2019-12-12T12:04:52Z" duration-ms="338" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logginnBtn_Click_Test -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.FrontpageTest@67774e29]" started-at="2019-12-11T13:24:05Z" name="tearDown" finished-at="2019-12-11T13:24:06Z" duration-ms="1439" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.FrontpageTest@1e95b653]" started-at="2019-12-12T12:04:52Z" name="tearDown" finished-at="2019-12-12T12:04:52Z" duration-ms="744" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=logginnBtn_Click_Test status=SUCCESS method=FrontpageTest.logginnBtn_Click_Test()[pri:4, instance:sumo.qa.testcases.FrontpageTest@67774e29] output={null}]]]>
+                <![CDATA[[TestResult name=logginnBtn_Click_Test status=SUCCESS method=FrontpageTest.logginnBtn_Click_Test()[pri:4, instance:sumo.qa.testcases.FrontpageTest@1e95b653] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:sumo.qa.testcases.FrontpageTest@67774e29]" started-at="2019-12-11T13:24:06Z" name="setUp" finished-at="2019-12-11T13:24:12Z" duration-ms="5826" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:sumo.qa.testcases.FrontpageTest@1e95b653]" started-at="2019-12-12T12:04:52Z" name="setUp" finished-at="2019-12-12T12:04:58Z" duration-ms="6224" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="LogginnAvbrytBtn_Click_Test()[pri:5, instance:sumo.qa.testcases.FrontpageTest@67774e29]" started-at="2019-12-11T13:24:12Z" name="LogginnAvbrytBtn_Click_Test" finished-at="2019-12-11T13:24:12Z" duration-ms="371" status="PASS">
+        <test-method signature="LogginnAvbrytBtn_Click_Test()[pri:5, instance:sumo.qa.testcases.FrontpageTest@1e95b653]" started-at="2019-12-12T12:04:58Z" name="LogginnAvbrytBtn_Click_Test" finished-at="2019-12-12T12:04:59Z" duration-ms="924" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogginnAvbrytBtn_Click_Test -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.FrontpageTest@67774e29]" started-at="2019-12-11T13:24:12Z" name="tearDown" finished-at="2019-12-11T13:24:14Z" duration-ms="1276" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.FrontpageTest@1e95b653]" started-at="2019-12-12T12:04:59Z" name="tearDown" finished-at="2019-12-12T12:05:01Z" duration-ms="1197" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=LogginnAvbrytBtn_Click_Test status=SUCCESS method=FrontpageTest.LogginnAvbrytBtn_Click_Test()[pri:5, instance:sumo.qa.testcases.FrontpageTest@67774e29] output={null}]]]>
+                <![CDATA[[TestResult name=LogginnAvbrytBtn_Click_Test status=SUCCESS method=FrontpageTest.LogginnAvbrytBtn_Click_Test()[pri:5, instance:sumo.qa.testcases.FrontpageTest@1e95b653] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:sumo.qa.testcases.FrontpageTest@67774e29]" started-at="2019-12-11T13:24:14Z" name="setUp" finished-at="2019-12-11T13:24:19Z" duration-ms="5663" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:sumo.qa.testcases.FrontpageTest@1e95b653]" started-at="2019-12-12T12:05:01Z" name="setUp" finished-at="2019-12-12T12:05:07Z" duration-ms="6320" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="SumoLogo_Click_Test()[pri:6, instance:sumo.qa.testcases.FrontpageTest@67774e29]" started-at="2019-12-11T13:24:19Z" name="SumoLogo_Click_Test" finished-at="2019-12-11T13:24:20Z" duration-ms="566" status="PASS">
+        <test-method signature="SumoLogo_Click_Test()[pri:6, instance:sumo.qa.testcases.FrontpageTest@1e95b653]" started-at="2019-12-12T12:05:07Z" name="SumoLogo_Click_Test" finished-at="2019-12-12T12:05:09Z" duration-ms="1769" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SumoLogo_Click_Test -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.FrontpageTest@67774e29]" started-at="2019-12-11T13:24:20Z" name="tearDown" finished-at="2019-12-11T13:24:21Z" duration-ms="1038" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:sumo.qa.testcases.FrontpageTest@1e95b653]" started-at="2019-12-12T12:05:09Z" name="tearDown" finished-at="2019-12-12T12:05:10Z" duration-ms="830" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SumoLogo_Click_Test status=SUCCESS method=FrontpageTest.SumoLogo_Click_Test()[pri:6, instance:sumo.qa.testcases.FrontpageTest@67774e29] output={null}]]]>
+                <![CDATA[[TestResult name=SumoLogo_Click_Test status=SUCCESS method=FrontpageTest.SumoLogo_Click_Test()[pri:6, instance:sumo.qa.testcases.FrontpageTest@1e95b653] output={null}]]]>
               </value>
             </param>
           </params>

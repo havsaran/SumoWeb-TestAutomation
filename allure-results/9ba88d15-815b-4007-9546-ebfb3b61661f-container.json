@@ -1,1 +1,0 @@
-{"uuid":"9ba88d15-815b-4007-9546-ebfb3b61661f","name":"sumo.qa.testcases.FrontpageTest.setUp","description":"","start":1576050632562,"stop":1576050643002,"children":["a5de6622-d242-498f-ad98-adcc1109021e"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","start":1576050632563,"stop":1576050643002}]}
