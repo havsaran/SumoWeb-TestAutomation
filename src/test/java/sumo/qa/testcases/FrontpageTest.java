@@ -1,6 +1,5 @@
 package sumo.qa.testcases;
 
-
 import java.io.IOException;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -128,16 +127,14 @@ public class FrontpageTest extends TestBase {
 
 		frontpage.clickOn_SumoLogo();
 
-		new WebDriverWait(getDriver(),TestUtil.ExplicitWait).until(ExpectedConditions.urlToBe("https://sumo.tv2.no/"));
+		new WebDriverWait(getDriver(), TestUtil.ExplicitWait).until(ExpectedConditions.titleIs("TV 2 Sumo"));
 		String actualTitle = getDriver().getTitle();
 		Assert.assertEquals(actualTitle, "TV 2 Sumo", "It's redirected to different page");
-		
 
 	}
 
 	@AfterMethod
 	public void tearDown(ITestResult result) {
-	  if (driver!=null)
 		driver.quit();
 	}
 
